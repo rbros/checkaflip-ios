@@ -30,21 +30,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (BOOL) textFieldShouldReturn:(UITextField *)textField
+- (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    // this callback can be moved to app delegate to always store datas at a high level.
+    // this callback can be moved to a shared delegate between craigslist and ebay tabs to always store datas at a high level.
     
-    NSLog(@"You entered %@", self.searchTextView.text);
+    NSLog(@"You entered %@", self.searchBar.text);
+    
     // set list loading icon.
     
     // load data from http
     CAFEbayDataFetcher* ebaydf = [[CAFEbayDataFetcher alloc] init];
-    [ebaydf search: self.searchTextView.text];
+    [ebaydf search: self.searchBar.text];
 
     // populate completed and current lists
-    [self.searchTextView resignFirstResponder];
-    
-    return YES;
+    [self.searchBar resignFirstResponder];
 }
 
 - (UITableViewCell*) tableView:(UITableViewCell*) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
