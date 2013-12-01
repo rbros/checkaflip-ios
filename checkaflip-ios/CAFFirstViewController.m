@@ -8,11 +8,13 @@
 
 #import "CAFFirstViewController.h"
 
-@interface CAFFirstViewController ()
 
+@interface CAFFirstViewController ()
 @end
 
 @implementation CAFFirstViewController
+- (IBAction)searchTextView:(UITextField *)sender {
+}
 
 - (void)viewDidLoad
 {
@@ -24,6 +26,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"You entered %@", self.searchTextView.text);
+    [self.searchTextView resignFirstResponder];
+    return YES;
 }
 
 @end

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CAFFirstViewController : UIViewController
+@interface CAFFirstViewController : UIViewController <UITextFieldDelegate>
+
+@property (strong, nonatomic) IBOutlet UITextField* searchTextView;
 
 @end
