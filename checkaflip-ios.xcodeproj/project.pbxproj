@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		162AC3D3184B03AC00E9FCCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162AC3D2184B03AC00E9FCCF /* Foundation.framework */; };
+		162AC3D5184B03AC00E9FCCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162AC3D4184B03AC00E9FCCF /* CoreGraphics.framework */; };
+		162AC3D7184B03AC00E9FCCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162AC3D6184B03AC00E9FCCF /* UIKit.framework */; };
+		162AC3DD184B03AC00E9FCCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 162AC3DB184B03AC00E9FCCF /* InfoPlist.strings */; };
+		162AC3DF184B03AC00E9FCCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 162AC3DE184B03AC00E9FCCF /* main.m */; };
+		162AC3E3184B03AC00E9FCCF /* CAFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 162AC3E2184B03AC00E9FCCF /* CAFAppDelegate.m */; };
+		162AC3E6184B03AC00E9FCCF /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 162AC3E4184B03AC00E9FCCF /* Main_iPhone.storyboard */; };
+		162AC3E9184B03AC00E9FCCF /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 162AC3E7184B03AC00E9FCCF /* Main_iPad.storyboard */; };
+		162AC3EC184B03AC00E9FCCF /* CAFFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 162AC3EB184B03AC00E9FCCF /* CAFFirstViewController.m */; };
+		162AC3EF184B03AC00E9FCCF /* CAFSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 162AC3EE184B03AC00E9FCCF /* CAFSecondViewController.m */; };
+		162AC3F1184B03AC00E9FCCF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 162AC3F0184B03AC00E9FCCF /* Images.xcassets */; };
+		162AC3F8184B03AC00E9FCCF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162AC3F7184B03AC00E9FCCF /* XCTest.framework */; };
+		162AC3F9184B03AC00E9FCCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162AC3D2184B03AC00E9FCCF /* Foundation.framework */; };
+		162AC3FA184B03AC00E9FCCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162AC3D6184B03AC00E9FCCF /* UIKit.framework */; };
+		162AC402184B03AC00E9FCCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 162AC400184B03AC00E9FCCF /* InfoPlist.strings */; };
+		162AC404184B03AC00E9FCCF /* checkaflip_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 162AC403184B03AC00E9FCCF /* checkaflip_iosTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		162AC3FB184B03AC00E9FCCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 162AC3C7184B03AC00E9FCCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 162AC3CE184B03AC00E9FCCF;
+			remoteInfo = "checkaflip-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		162AC3CF184B03AC00E9FCCF /* checkaflip-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "checkaflip-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		162AC3D2184B03AC00E9FCCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		162AC3D4184B03AC00E9FCCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		162AC3D6184B03AC00E9FCCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		162AC3DA184B03AC00E9FCCF /* checkaflip-ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "checkaflip-ios-Info.plist"; sourceTree = "<group>"; };
+		162AC3DC184B03AC00E9FCCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		162AC3DE184B03AC00E9FCCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		162AC3E0184B03AC00E9FCCF /* checkaflip-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "checkaflip-ios-Prefix.pch"; sourceTree = "<group>"; };
+		162AC3E1184B03AC00E9FCCF /* CAFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAFAppDelegate.h; sourceTree = "<group>"; };
+		162AC3E2184B03AC00E9FCCF /* CAFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAFAppDelegate.m; sourceTree = "<group>"; };
+		162AC3E5184B03AC00E9FCCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		162AC3E8184B03AC00E9FCCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		162AC3EA184B03AC00E9FCCF /* CAFFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAFFirstViewController.h; sourceTree = "<group>"; };
+		162AC3EB184B03AC00E9FCCF /* CAFFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAFFirstViewController.m; sourceTree = "<group>"; };
+		162AC3ED184B03AC00E9FCCF /* CAFSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAFSecondViewController.h; sourceTree = "<group>"; };
+		162AC3EE184B03AC00E9FCCF /* CAFSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAFSecondViewController.m; sourceTree = "<group>"; };
+		162AC3F0184B03AC00E9FCCF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		162AC3F6184B03AC00E9FCCF /* checkaflip-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "checkaflip-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		162AC3F7184B03AC00E9FCCF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		162AC3FF184B03AC00E9FCCF /* checkaflip-iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "checkaflip-iosTests-Info.plist"; sourceTree = "<group>"; };
+		162AC401184B03AC00E9FCCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		162AC403184B03AC00E9FCCF /* checkaflip_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = checkaflip_iosTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		162AC3CC184B03AC00E9FCCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				162AC3D5184B03AC00E9FCCF /* CoreGraphics.framework in Frameworks */,
+				162AC3D7184B03AC00E9FCCF /* UIKit.framework in Frameworks */,
+				162AC3D3184B03AC00E9FCCF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		162AC3F3184B03AC00E9FCCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				162AC3F8184B03AC00E9FCCF /* XCTest.framework in Frameworks */,
+				162AC3FA184B03AC00E9FCCF /* UIKit.framework in Frameworks */,
+				162AC3F9184B03AC00E9FCCF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		162AC3C6184B03AC00E9FCCF = {
+			isa = PBXGroup;
+			children = (
+				162AC3D8184B03AC00E9FCCF /* checkaflip-ios */,
+				162AC3FD184B03AC00E9FCCF /* checkaflip-iosTests */,
+				162AC3D1184B03AC00E9FCCF /* Frameworks */,
+				162AC3D0184B03AC00E9FCCF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		162AC3D0184B03AC00E9FCCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				162AC3CF184B03AC00E9FCCF /* checkaflip-ios.app */,
+				162AC3F6184B03AC00E9FCCF /* checkaflip-iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		162AC3D1184B03AC00E9FCCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				162AC3D2184B03AC00E9FCCF /* Foundation.framework */,
+				162AC3D4184B03AC00E9FCCF /* CoreGraphics.framework */,
+				162AC3D6184B03AC00E9FCCF /* UIKit.framework */,
+				162AC3F7184B03AC00E9FCCF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		162AC3D8184B03AC00E9FCCF /* checkaflip-ios */ = {
+			isa = PBXGroup;
+			children = (
+				162AC3E1184B03AC00E9FCCF /* CAFAppDelegate.h */,
+				162AC3E2184B03AC00E9FCCF /* CAFAppDelegate.m */,
+				162AC3E4184B03AC00E9FCCF /* Main_iPhone.storyboard */,
+				162AC3E7184B03AC00E9FCCF /* Main_iPad.storyboard */,
+				162AC3EA184B03AC00E9FCCF /* CAFFirstViewController.h */,
+				162AC3EB184B03AC00E9FCCF /* CAFFirstViewController.m */,
+				162AC3ED184B03AC00E9FCCF /* CAFSecondViewController.h */,
+				162AC3EE184B03AC00E9FCCF /* CAFSecondViewController.m */,
+				162AC3F0184B03AC00E9FCCF /* Images.xcassets */,
+				162AC3D9184B03AC00E9FCCF /* Supporting Files */,
+			);
+			path = "checkaflip-ios";
+			sourceTree = "<group>";
+		};
+		162AC3D9184B03AC00E9FCCF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				162AC3DA184B03AC00E9FCCF /* checkaflip-ios-Info.plist */,
+				162AC3DB184B03AC00E9FCCF /* InfoPlist.strings */,
+				162AC3DE184B03AC00E9FCCF /* main.m */,
+				162AC3E0184B03AC00E9FCCF /* checkaflip-ios-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		162AC3FD184B03AC00E9FCCF /* checkaflip-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				162AC403184B03AC00E9FCCF /* checkaflip_iosTests.m */,
+				162AC3FE184B03AC00E9FCCF /* Supporting Files */,
+			);
+			path = "checkaflip-iosTests";
+			sourceTree = "<group>";
+		};
+		162AC3FE184B03AC00E9FCCF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				162AC3FF184B03AC00E9FCCF /* checkaflip-iosTests-Info.plist */,
+				162AC400184B03AC00E9FCCF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		162AC3CE184B03AC00E9FCCF /* checkaflip-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 162AC407184B03AC00E9FCCF /* Build configuration list for PBXNativeTarget "checkaflip-ios" */;
+			buildPhases = (
+				162AC3CB184B03AC00E9FCCF /* Sources */,
+				162AC3CC184B03AC00E9FCCF /* Frameworks */,
+				162AC3CD184B03AC00E9FCCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "checkaflip-ios";
+			productName = "checkaflip-ios";
+			productReference = 162AC3CF184B03AC00E9FCCF /* checkaflip-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		162AC3F5184B03AC00E9FCCF /* checkaflip-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 162AC40A184B03AC00E9FCCF /* Build configuration list for PBXNativeTarget "checkaflip-iosTests" */;
+			buildPhases = (
+				162AC3F2184B03AC00E9FCCF /* Sources */,
+				162AC3F3184B03AC00E9FCCF /* Frameworks */,
+				162AC3F4184B03AC00E9FCCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				162AC3FC184B03AC00E9FCCF /* PBXTargetDependency */,
+			);
+			name = "checkaflip-iosTests";
+			productName = "checkaflip-iosTests";
+			productReference = 162AC3F6184B03AC00E9FCCF /* checkaflip-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		162AC3C7184B03AC00E9FCCF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CAF;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = CheckAFlip;
+				TargetAttributes = {
+					162AC3F5184B03AC00E9FCCF = {
+						TestTargetID = 162AC3CE184B03AC00E9FCCF;
+					};
+				};
+			};
+			buildConfigurationList = 162AC3CA184B03AC00E9FCCF /* Build configuration list for PBXProject "checkaflip-ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 162AC3C6184B03AC00E9FCCF;
+			productRefGroup = 162AC3D0184B03AC00E9FCCF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				162AC3CE184B03AC00E9FCCF /* checkaflip-ios */,
+				162AC3F5184B03AC00E9FCCF /* checkaflip-iosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		162AC3CD184B03AC00E9FCCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				162AC3E9184B03AC00E9FCCF /* Main_iPad.storyboard in Resources */,
+				162AC3F1184B03AC00E9FCCF /* Images.xcassets in Resources */,
+				162AC3E6184B03AC00E9FCCF /* Main_iPhone.storyboard in Resources */,
+				162AC3DD184B03AC00E9FCCF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		162AC3F4184B03AC00E9FCCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				162AC402184B03AC00E9FCCF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		162AC3CB184B03AC00E9FCCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				162AC3EC184B03AC00E9FCCF /* CAFFirstViewController.m in Sources */,
+				162AC3EF184B03AC00E9FCCF /* CAFSecondViewController.m in Sources */,
+				162AC3DF184B03AC00E9FCCF /* main.m in Sources */,
+				162AC3E3184B03AC00E9FCCF /* CAFAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		162AC3F2184B03AC00E9FCCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				162AC404184B03AC00E9FCCF /* checkaflip_iosTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		162AC3FC184B03AC00E9FCCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 162AC3CE184B03AC00E9FCCF /* checkaflip-ios */;
+			targetProxy = 162AC3FB184B03AC00E9FCCF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		162AC3DB184B03AC00E9FCCF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				162AC3DC184B03AC00E9FCCF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		162AC3E4184B03AC00E9FCCF /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				162AC3E5184B03AC00E9FCCF /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		162AC3E7184B03AC00E9FCCF /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				162AC3E8184B03AC00E9FCCF /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		162AC400184B03AC00E9FCCF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				162AC401184B03AC00E9FCCF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		162AC405184B03AC00E9FCCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		162AC406184B03AC00E9FCCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		162AC408184B03AC00E9FCCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "checkaflip-ios/checkaflip-ios-Prefix.pch";
+				INFOPLIST_FILE = "checkaflip-ios/checkaflip-ios-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		162AC409184B03AC00E9FCCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "checkaflip-ios/checkaflip-ios-Prefix.pch";
+				INFOPLIST_FILE = "checkaflip-ios/checkaflip-ios-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		162AC40B184B03AC00E9FCCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/checkaflip-ios.app/checkaflip-ios";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "checkaflip-ios/checkaflip-ios-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "checkaflip-iosTests/checkaflip-iosTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		162AC40C184B03AC00E9FCCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/checkaflip-ios.app/checkaflip-ios";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "checkaflip-ios/checkaflip-ios-Prefix.pch";
+				INFOPLIST_FILE = "checkaflip-iosTests/checkaflip-iosTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		162AC3CA184B03AC00E9FCCF /* Build configuration list for PBXProject "checkaflip-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				162AC405184B03AC00E9FCCF /* Debug */,
+				162AC406184B03AC00E9FCCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		162AC407184B03AC00E9FCCF /* Build configuration list for PBXNativeTarget "checkaflip-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				162AC408184B03AC00E9FCCF /* Debug */,
+				162AC409184B03AC00E9FCCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		162AC40A184B03AC00E9FCCF /* Build configuration list for PBXNativeTarget "checkaflip-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				162AC40B184B03AC00E9FCCF /* Debug */,
+				162AC40C184B03AC00E9FCCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 162AC3C7184B03AC00E9FCCF /* Project object */;
+}
