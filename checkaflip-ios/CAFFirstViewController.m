@@ -7,7 +7,7 @@
 //
 
 #import "CAFFirstViewController.h"
-
+#import "CAFEbayDataFetcher.h"
 
 @interface CAFFirstViewController ()
 @end
@@ -38,9 +38,12 @@
     // set list loading icon.
     
     // load data from http
-    
+    CAFEbayDataFetcher* ebaydf = [[CAFEbayDataFetcher alloc] init];
+    [ebaydf search: self.searchTextView.text];
+
     // populate completed and current lists
     [self.searchTextView resignFirstResponder];
+    
     return YES;
 }
 

@@ -23,6 +23,8 @@
 		162AC3FA184B03AC00E9FCCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162AC3D6184B03AC00E9FCCF /* UIKit.framework */; };
 		162AC402184B03AC00E9FCCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 162AC400184B03AC00E9FCCF /* InfoPlist.strings */; };
 		162AC404184B03AC00E9FCCF /* checkaflip_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 162AC403184B03AC00E9FCCF /* checkaflip_iosTests.m */; };
+		169C6CAD184BF78600253B81 /* CAFEbayDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 169C6CAC184BF78600253B81 /* CAFEbayDataFetcher.m */; };
+		169C6CB0184BF92700253B81 /* CAFEbaySearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 169C6CAF184BF92700253B81 /* CAFEbaySearchResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		162AC3FF184B03AC00E9FCCF /* checkaflip-iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "checkaflip-iosTests-Info.plist"; sourceTree = "<group>"; };
 		162AC401184B03AC00E9FCCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		162AC403184B03AC00E9FCCF /* checkaflip_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = checkaflip_iosTests.m; sourceTree = "<group>"; };
+		169C6CAB184BF78600253B81 /* CAFEbayDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAFEbayDataFetcher.h; sourceTree = "<group>"; };
+		169C6CAC184BF78600253B81 /* CAFEbayDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAFEbayDataFetcher.m; sourceTree = "<group>"; };
+		169C6CAE184BF92700253B81 /* CAFEbaySearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAFEbaySearchResult.h; sourceTree = "<group>"; };
+		169C6CAF184BF92700253B81 /* CAFEbaySearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAFEbaySearchResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,10 @@
 				162AC3EE184B03AC00E9FCCF /* CAFSecondViewController.m */,
 				162AC3F0184B03AC00E9FCCF /* Images.xcassets */,
 				162AC3D9184B03AC00E9FCCF /* Supporting Files */,
+				169C6CAB184BF78600253B81 /* CAFEbayDataFetcher.h */,
+				169C6CAC184BF78600253B81 /* CAFEbayDataFetcher.m */,
+				169C6CAE184BF92700253B81 /* CAFEbaySearchResult.h */,
+				169C6CAF184BF92700253B81 /* CAFEbaySearchResult.m */,
 			);
 			path = "checkaflip-ios";
 			sourceTree = "<group>";
@@ -259,8 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				169C6CB0184BF92700253B81 /* CAFEbaySearchResult.m in Sources */,
 				162AC3EC184B03AC00E9FCCF /* CAFFirstViewController.m in Sources */,
 				162AC3EF184B03AC00E9FCCF /* CAFSecondViewController.m in Sources */,
+				169C6CAD184BF78600253B81 /* CAFEbayDataFetcher.m in Sources */,
 				162AC3DF184B03AC00E9FCCF /* main.m in Sources */,
 				162AC3E3184B03AC00E9FCCF /* CAFAppDelegate.m in Sources */,
 			);
@@ -481,6 +493,7 @@
 				162AC409184B03AC00E9FCCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		162AC40A184B03AC00E9FCCF /* Build configuration list for PBXNativeTarget "checkaflip-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +502,7 @@
 				162AC40C184B03AC00E9FCCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
