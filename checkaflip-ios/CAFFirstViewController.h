@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CAFFirstViewController : UIViewController <UITextFieldDelegate>
+@interface CAFFirstViewController : UIViewController <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITextField* searchTextView;
+@property (strong, nonatomic) IBOutlet UISegmentedControl* ebaySegmentedControl;
+@property (strong, nonatomic) IBOutlet UITableView* tableView;
 
 @end
