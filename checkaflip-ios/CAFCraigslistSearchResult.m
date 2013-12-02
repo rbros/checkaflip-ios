@@ -1,26 +1,24 @@
 //
-//  CAFEbaySearchResult.m
+//  CAFCraigslistSearchResult.m
 //  checkaflip-ios
 //
 //  Created by caf on 12/1/13.
 //  Copyright (c) 2013 CheckAFlip. All rights reserved.
 //
 
-#import "CAFEbaySearchResult.h"
+#import "CAFCraigslistSearchResult.h"
 
-@implementation CAFEbaySearchResult
+@implementation CAFCraigslistSearchResult
 {
-    NSMutableArray* _completedListings;
-    NSMutableArray* _currentListings;
+    NSMutableArray* _listings;
 }
 
 - (id) initWithJSONData:(NSData*) json;
 {
     self = [super init];
-
+    
     if (self) {
-        _completedListings = [[NSMutableArray alloc] init];
-        _currentListings = [[NSMutableArray alloc] init];
+        _listings = [[NSMutableArray alloc] init];
         [self parseJSON:json];
     }
     return self;
@@ -35,27 +33,18 @@
         NSLog(@"JSONObjectWithData error: %@", error);
         return;
     }
-
+    
     NSArray* completedListings = json[@"completedListings"];
     for (NSDictionary* listing in completedListings) {
         NSString* title = listing[@"title"];
-        [_completedListings addObject:title];
-    }
-    
-    NSArray* currentListings = json[@"currentListings"];
-    for (NSDictionary* listing in currentListings) {
-        [_currentListings addObject:listing[@"title"]];
+        [_listings addObject:title];
     }
 }
 
-- (NSArray*) getCompletedListings
+- (NSArray*) getListings
 {
-    return _completedListings;
+    return _listings;
 }
 
-- (NSArray*) getCurrentListings
-{
-    return _currentListings;
-}
 
 @end

@@ -1,16 +1,17 @@
 //
-//  CAFEbayDataFetcher.m
+//  CAFCraigslistDataFetcher.m
 //  checkaflip-ios
 //
 //  Created by caf on 12/1/13.
 //  Copyright (c) 2013 CheckAFlip. All rights reserved.
 //
 
-#import "CAFEbayDataFetcher.h"
+#import "CAFCraigslistDataFetcher.h"
 
-@implementation CAFEbayDataFetcher
+@implementation CAFCraigslistDataFetcher
 
-- (NSData*)search:(NSString*) key
+
+- (CAFCraigslistSearchResult*)search:(NSString*) key
 {
     // Make http request for JSON.
     NSString* server = [NSString stringWithFormat:@"http://checkaflip.com/searchEbay/?q=%@&new=false&json=true", key];
@@ -23,8 +24,7 @@
     NSURLResponse* response = nil;
     
     NSData* json = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    return json;
-
+    
+    return [[CAFCraigslistSearchResult alloc] initWithJSONData:json];
 }
-
 @end

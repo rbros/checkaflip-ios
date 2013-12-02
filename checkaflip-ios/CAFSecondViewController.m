@@ -6,13 +6,18 @@
 //  Copyright (c) 2013 CheckAFlip. All rights reserved.
 //
 
+#import "CAFAppDelegate.h"
 #import "CAFSecondViewController.h"
+#import "CAFCraigslistSearchResult.h"
 
 @interface CAFSecondViewController ()
 
 @end
 
 @implementation CAFSecondViewController
+{
+    CAFCraigslistSearchResult* _clsr;
+}
 
 - (void)viewDidLoad
 {
@@ -20,9 +25,12 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void) viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    _clsr = app.getDataFetcher.getCraigslistSearchResult;
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -31,4 +39,34 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    
+    if (_clsr) {
+        cell.textLabel.text = [[_clsr getListings] objectAtIndex:indexPath.row];
+    }
+    
+    return cell;
+}
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (_clsr) {
+        return [[_clsr getListings] count];
+    }
+    
+    return 0;
+}
+
 @end
+

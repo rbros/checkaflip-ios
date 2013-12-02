@@ -10,9 +10,7 @@
 #import "CAFDataFetcher.h"
 
 @implementation CAFAppDelegate
-{
-    CAFDataFetcher* _dataFetcher;
-}
+@synthesize _dataFetcher;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

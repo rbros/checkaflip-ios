@@ -52,7 +52,8 @@
     // set list loading icon.
     
     // load data from http
-    CAFDataFetcher* df = [[CAFDataFetcher alloc] init];
+    CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
+    CAFDataFetcher* df = app.getDataFetcher;
     [df search:self.searchBar.text];
     _ebaysr = df.getEbaySearchResult;
     

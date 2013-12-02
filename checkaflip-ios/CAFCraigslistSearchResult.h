@@ -1,5 +1,5 @@
 //
-//  CAFEbaySearchResult.h
+//  CAFCraigslistSearchResult.h
 //  checkaflip-ios
 //
 //  Created by caf on 12/1/13.
@@ -8,13 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CAFEbaySearchResult : NSObject
-{
-}
+@interface CAFCraigslistSearchResult : NSObject
 
 - (id) initWithJSONData:(NSString*)json;
-- (NSArray*) getCompletedListings;
-- (NSArray*) getCurrentListings;
-
+- (NSArray*) getListings;
 
 @end

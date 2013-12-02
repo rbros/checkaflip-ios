@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 
 #import "CAFEbaySearchResult.h"
+#import "CAFCraigslistSearchResult.h"
 
 @interface CAFDataFetcher : NSObject
 
 - (void) search:(NSString*) key;
 - (CAFEbaySearchResult*) getEbaySearchResult;
+- (CAFCraigslistSearchResult*) getCraigslistSearchResult;
 
 @end
