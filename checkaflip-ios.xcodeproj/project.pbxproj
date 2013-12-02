@@ -28,6 +28,7 @@
 		169C6CB3184C30F400253B81 /* CAFDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 169C6CB2184C30F400253B81 /* CAFDataFetcher.m */; };
 		169C6CB6184C3A8C00253B81 /* CAFCraigslistSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 169C6CB5184C3A8C00253B81 /* CAFCraigslistSearchResult.m */; };
 		169C6CB9184C3A9C00253B81 /* CAFCraigslistDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 169C6CB8184C3A9C00253B81 /* CAFCraigslistDataFetcher.m */; };
+		169C6CBC184C5B4900253B81 /* CAFListingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 169C6CBB184C5B4900253B81 /* CAFListingItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		169C6CB5184C3A8C00253B81 /* CAFCraigslistSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAFCraigslistSearchResult.m; sourceTree = "<group>"; };
 		169C6CB7184C3A9C00253B81 /* CAFCraigslistDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAFCraigslistDataFetcher.h; path = ../CAFCraigslistDataFetcher.h; sourceTree = "<group>"; };
 		169C6CB8184C3A9C00253B81 /* CAFCraigslistDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CAFCraigslistDataFetcher.m; path = ../CAFCraigslistDataFetcher.m; sourceTree = "<group>"; };
+		169C6CBA184C5B4900253B81 /* CAFListingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAFListingItem.h; sourceTree = "<group>"; };
+		169C6CBB184C5B4900253B81 /* CAFListingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAFListingItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 				169C6CB8184C3A9C00253B81 /* CAFCraigslistDataFetcher.m */,
 				169C6CB4184C3A8C00253B81 /* CAFCraigslistSearchResult.h */,
 				169C6CB5184C3A8C00253B81 /* CAFCraigslistSearchResult.m */,
+				169C6CBA184C5B4900253B81 /* CAFListingItem.h */,
+				169C6CBB184C5B4900253B81 /* CAFListingItem.m */,
 			);
 			path = "checkaflip-ios";
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 			files = (
 				169C6CB0184BF92700253B81 /* CAFEbaySearchResult.m in Sources */,
 				162AC3EC184B03AC00E9FCCF /* CAFFirstViewController.m in Sources */,
+				169C6CBC184C5B4900253B81 /* CAFListingItem.m in Sources */,
 				169C6CB6184C3A8C00253B81 /* CAFCraigslistSearchResult.m in Sources */,
 				162AC3EF184B03AC00E9FCCF /* CAFSecondViewController.m in Sources */,
 				169C6CAD184BF78600253B81 /* CAFEbayDataFetcher.m in Sources */,

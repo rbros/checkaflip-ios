@@ -7,6 +7,7 @@
 //
 
 #import "CAFEbaySearchResult.h"
+#import "CAFListingItem.h"
 
 @implementation CAFEbaySearchResult
 {
@@ -39,6 +40,8 @@
     NSArray* completedListings = json[@"completedListings"];
     for (NSDictionary* listing in completedListings) {
         NSString* title = listing[@"title"];
+        
+        CAFListingItem* item = [[CAFListingItem alloc] initWithDict:listing];
         [_completedListings addObject:title];
     }
     
