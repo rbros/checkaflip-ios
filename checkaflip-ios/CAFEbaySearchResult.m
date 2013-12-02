@@ -10,24 +10,43 @@
 
 @implementation CAFEbaySearchResult
 {
-    NSArray* _completedListings;
-    NSArray* _currentListings;
+    NSMutableArray* _completedListings;
+    NSMutableArray* _currentListings;
 }
 
-- (id) initWithJSONStr:(NSString*) json;
+- (id) initWithJSONStr:(NSData*) json;
 {
     self = [super init];
     
+
     if (self) {
-        _completedListings = [NSArray arrayWithObjects: @"eBay", nil];
-        _currentListings = [NSArray arrayWithObjects: @"eBay_completed", nil];
+        _completedListings = [[NSMutableArray alloc] init];
+        _currentListings = [[NSMutableArray alloc] init];
+        [self parseJSON:json];
     }
     return self;
 }
 
-- (void) parseJSON:(NSString*) json
+- (void) parseJSON:(NSData*) jsondata
 {
+    NSError* error;
+    NSDictionary* json = [NSJSONSerialization JSONObjectWithData:jsondata options:NSJSONReadingMutableContainers error:&error];
     
+    if (error) {
+        NSLog(@"JSONObjectWithData error: %@", error);
+        return;
+    }
+
+    NSArray* completedListings = json[@"completedListings"];
+    for (NSDictionary* listing in completedListings) {
+        NSString* title = listing[@"title"];
+        [_completedListings addObject:title];
+    }
+    
+    NSArray* currentListings = json[@"currentListings"];
+    for (NSDictionary* listing in currentListings) {
+        [_currentListings addObject:listing[@"title"]];
+    }
 }
 
 - (NSArray*) getCompletedListings

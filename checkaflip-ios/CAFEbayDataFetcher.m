@@ -13,8 +13,8 @@
 - (CAFEbaySearchResult*)search:(NSString*) key
 {
     // Make http request for JSON.
-    NSString* serverAddress = @"http://checkaflip.com/searchEbay/?q=suit&new=false&json=true";
-    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:serverAddress]
+    NSString* server = [NSString stringWithFormat:@"http://checkaflip.com/searchEbay/?q=%@&new=false&json=true", key];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server]
                                                            cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
     
     [request setHTTPMethod:@"GET"];
@@ -24,8 +24,7 @@
     
     NSData* json = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
-    NSString* jsonstr = [[NSString alloc] initWithData:json encoding:NSASCIIStringEncoding];
-    return [[CAFEbaySearchResult alloc] initWithJSONStr:jsonstr];
+    return [[CAFEbaySearchResult alloc] initWithJSONStr:json];
 }
 
 @end
