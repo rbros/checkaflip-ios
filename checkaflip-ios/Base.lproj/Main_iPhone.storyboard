@@ -48,7 +48,7 @@
                                 <rect key="frame" x="251" y="27" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="onSliderChanged:" destination="CZ4-MO-1fc" eventType="valueChanged" id="XAm-hT-5kq"/>
+                                    <action selector="onSliderChanged:" destination="CZ4-MO-1fc" eventType="valueChanged" id="KB5-Lf-zgH"/>
                                 </connections>
                             </switch>
                         </subviews>
@@ -58,7 +58,7 @@
                     <connections>
                         <outlet property="ebaySegmentedControl" destination="Cnz-XX-Jy6" id="9oh-KZ-Fig"/>
                         <outlet property="searchBar" destination="Mwy-ZO-9iT" id="1JE-pN-9ZZ"/>
-                        <outlet property="slider" destination="uci-UD-3tR" id="LCS-ax-sYJ"/>
+                        <outlet property="slider" destination="uci-UD-3tR" id="aX7-P4-lLM"/>
                         <outlet property="tableView" destination="71j-vL-8fy" id="tcR-QL-Kzl"/>
                     </connections>
                 </viewController>
@@ -99,7 +99,7 @@
                                 <rect key="frame" x="251" y="27" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="onSliderChange:" destination="QUy-BD-bpt" eventType="valueChanged" id="N0g-an-W3i"/>
+                                    <action selector="onSliderChanged:" destination="QUy-BD-bpt" eventType="valueChanged" id="bJa-RL-ANB"/>
                                 </connections>
                             </switch>
                         </subviews>
@@ -108,7 +108,7 @@
                     <tabBarItem key="tabBarItem" title="Craigslist" image="second" id="Z7h-1E-pvt"/>
                     <connections>
                         <outlet property="searchBar" destination="s2D-q0-kjk" id="UHi-FO-FIK"/>
-                        <outlet property="slider" destination="gdN-ov-3ec" id="h4j-cL-kfI"/>
+                        <outlet property="slider" destination="gdN-ov-3ec" id="0Vq-wm-7x5"/>
                         <outlet property="tableView" destination="SKy-de-JBU" id="h8A-tO-F4n"/>
                     </connections>
                 </viewController>
