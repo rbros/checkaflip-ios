@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 CheckAFlip. All rights reserved.
 //
 
+#import "CAFAppDelegate.h"
 #import "CAFFirstViewController.h"
 #import "CAFEbayDataFetcher.h"
 #import "CAFEbaySearchResult.h"
@@ -28,6 +29,14 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void) viewDidAppear:(BOOL)animated
+{
+    CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    _ebaysr = app.getDataFetcher.getEbaySearchResult;
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -43,8 +52,10 @@
     // set list loading icon.
     
     // load data from http
-    CAFEbayDataFetcher* ebaydf = [[CAFEbayDataFetcher alloc] init];
-    _ebaysr = [ebaydf search: self.searchBar.text];
+    CAFDataFetcher* df = [[CAFDataFetcher alloc] init];
+    [df search:self.searchBar.text];
+    _ebaysr = df.getEbaySearchResult;
+    
     [self.tableView reloadData];
 
     // populate completed and current lists

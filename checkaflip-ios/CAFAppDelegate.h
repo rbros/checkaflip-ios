@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#include "CAFDataFetcher.h"
+
 @interface CAFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+- (CAFDataFetcher*) getDataFetcher;
 
 @end

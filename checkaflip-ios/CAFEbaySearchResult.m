@@ -17,7 +17,6 @@
 - (id) initWithJSONStr:(NSData*) json;
 {
     self = [super init];
-    
 
     if (self) {
         _completedListings = [[NSMutableArray alloc] init];

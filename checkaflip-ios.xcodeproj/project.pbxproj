@@ -25,6 +25,7 @@
 		162AC404184B03AC00E9FCCF /* checkaflip_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 162AC403184B03AC00E9FCCF /* checkaflip_iosTests.m */; };
 		169C6CAD184BF78600253B81 /* CAFEbayDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 169C6CAC184BF78600253B81 /* CAFEbayDataFetcher.m */; };
 		169C6CB0184BF92700253B81 /* CAFEbaySearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 169C6CAF184BF92700253B81 /* CAFEbaySearchResult.m */; };
+		169C6CB3184C30F400253B81 /* CAFDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 169C6CB2184C30F400253B81 /* CAFDataFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		169C6CAC184BF78600253B81 /* CAFEbayDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAFEbayDataFetcher.m; sourceTree = "<group>"; };
 		169C6CAE184BF92700253B81 /* CAFEbaySearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAFEbaySearchResult.h; sourceTree = "<group>"; };
 		169C6CAF184BF92700253B81 /* CAFEbaySearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAFEbaySearchResult.m; sourceTree = "<group>"; };
+		169C6CB1184C30F400253B81 /* CAFDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAFDataFetcher.h; sourceTree = "<group>"; };
+		169C6CB2184C30F400253B81 /* CAFDataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAFDataFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				169C6CAC184BF78600253B81 /* CAFEbayDataFetcher.m */,
 				169C6CAE184BF92700253B81 /* CAFEbaySearchResult.h */,
 				169C6CAF184BF92700253B81 /* CAFEbaySearchResult.m */,
+				169C6CB1184C30F400253B81 /* CAFDataFetcher.h */,
+				169C6CB2184C30F400253B81 /* CAFDataFetcher.m */,
 			);
 			path = "checkaflip-ios";
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				162AC3EF184B03AC00E9FCCF /* CAFSecondViewController.m in Sources */,
 				169C6CAD184BF78600253B81 /* CAFEbayDataFetcher.m in Sources */,
 				162AC3DF184B03AC00E9FCCF /* main.m in Sources */,
+				169C6CB3184C30F400253B81 /* CAFDataFetcher.m in Sources */,
 				162AC3E3184B03AC00E9FCCF /* CAFAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

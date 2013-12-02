@@ -7,13 +7,23 @@
 //
 
 #import "CAFAppDelegate.h"
+#import "CAFDataFetcher.h"
 
 @implementation CAFAppDelegate
+{
+    CAFDataFetcher* _dataFetcher;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    _dataFetcher = [[CAFDataFetcher alloc] init];
+
     return YES;
+}
+
+- (CAFDataFetcher*) getDataFetcher
+{
+    return _dataFetcher;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
