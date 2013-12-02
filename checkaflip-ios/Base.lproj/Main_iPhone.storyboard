@@ -36,7 +36,7 @@
                                     <outlet property="delegate" destination="CZ4-MO-1fc" id="Wim-m8-SqP"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Find pricing information for..." translatesAutoresizingMaskIntoConstraints="NO" id="Mwy-ZO-9iT">
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Find pricing information for ..." translatesAutoresizingMaskIntoConstraints="NO" id="Mwy-ZO-9iT">
                                 <rect key="frame" x="0.0" y="21" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -89,6 +89,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Craigslist" image="second" id="Z7h-1E-pvt"/>
                     <connections>
+                        <outlet property="searchBar" destination="s2D-q0-kjk" id="UHi-FO-FIK"/>
                         <outlet property="tableView" destination="SKy-de-JBU" id="h8A-tO-F4n"/>
                     </connections>
                 </viewController>

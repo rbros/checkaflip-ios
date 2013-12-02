@@ -28,8 +28,11 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
+    CAFDataFetcher* df = app.getDataFetcher;
     
-    _clsr = app.getDataFetcher.getCraigslistSearchResult;
+    self.searchBar.text = df.getCurrentSearchKey;
+    
+    _clsr = df.getCraigslistSearchResult;
     [self.tableView reloadData];
 }
 

@@ -14,6 +14,7 @@
 
 @implementation CAFDataFetcher
 {
+    NSString* _currentKey;
     CAFEbaySearchResult* _ebaysr;
     CAFCraigslistSearchResult* _clsr;
 }
@@ -21,20 +22,24 @@
 - (id) init
 {
     self = [super self];
-    if (self) {
-        _ebaysr = nil;
-        _clsr = nil;
-    }
     return self;
 }
 
 - (void) search:(NSString*)key
 {
+    _currentKey = key;
+
     CAFEbayDataFetcher* ebaydf = [[CAFEbayDataFetcher alloc] init];
-    _ebaysr = [[CAFEbaySearchResult alloc] initWithJSONData:[ebaydf search:key]];
+    _ebaysr = [ebaydf search:key];
     
     CAFCraigslistDataFetcher* cldf = [[CAFCraigslistDataFetcher alloc] init];
     _clsr = [cldf search:key];
+
+}
+
+- (NSString*) getCurrentSearchKey
+{
+    return _currentKey;
 }
 
 - (CAFEbaySearchResult*) getEbaySearchResult

@@ -132,8 +132,6 @@
 		162AC3D8184B03AC00E9FCCF /* checkaflip-ios */ = {
 			isa = PBXGroup;
 			children = (
-				169C6CB7184C3A9C00253B81 /* CAFCraigslistDataFetcher.h */,
-				169C6CB8184C3A9C00253B81 /* CAFCraigslistDataFetcher.m */,
 				162AC3E1184B03AC00E9FCCF /* CAFAppDelegate.h */,
 				162AC3E2184B03AC00E9FCCF /* CAFAppDelegate.m */,
 				162AC3E4184B03AC00E9FCCF /* Main_iPhone.storyboard */,
@@ -150,6 +148,8 @@
 				169C6CAF184BF92700253B81 /* CAFEbaySearchResult.m */,
 				169C6CB1184C30F400253B81 /* CAFDataFetcher.h */,
 				169C6CB2184C30F400253B81 /* CAFDataFetcher.m */,
+				169C6CB7184C3A9C00253B81 /* CAFCraigslistDataFetcher.h */,
+				169C6CB8184C3A9C00253B81 /* CAFCraigslistDataFetcher.m */,
 				169C6CB4184C3A8C00253B81 /* CAFCraigslistSearchResult.h */,
 				169C6CB5184C3A8C00253B81 /* CAFCraigslistSearchResult.m */,
 			);

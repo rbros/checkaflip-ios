@@ -32,8 +32,11 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
+    CAFDataFetcher* df = app.getDataFetcher;
     
-    _ebaysr = app.getDataFetcher.getEbaySearchResult;
+    self.searchBar.text = df.getCurrentSearchKey;
+    
+    _ebaysr = df.getEbaySearchResult;
     [self.tableView reloadData];
 }
 

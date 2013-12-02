@@ -11,5 +11,6 @@
 @interface CAFSecondViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView* tableView;
+@property (strong, nonatomic) IBOutlet UISearchBar* searchBar;
 
 @end

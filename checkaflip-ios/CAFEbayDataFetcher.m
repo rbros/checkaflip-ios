@@ -10,7 +10,7 @@
 
 @implementation CAFEbayDataFetcher
 
-- (NSData*)search:(NSString*) key
+- (CAFEbaySearchResult*)search:(NSString*) key
 {
     // Make http request for JSON.
     NSString* server = [NSString stringWithFormat:@"http://checkaflip.com/searchEbay/?q=%@&new=false&json=true", key];
@@ -23,8 +23,8 @@
     NSURLResponse* response = nil;
     
     NSData* json = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    return json;
-
+    
+    return [[CAFEbaySearchResult alloc] initWithJSONData:json];
 }
 
 @end
