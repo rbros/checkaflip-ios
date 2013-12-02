@@ -14,14 +14,20 @@
     NSArray* _currentListings;
 }
 
-- (id) init;
+- (id) initWithJSONStr:(NSString*) json;
 {
     self = [super init];
     
-    _completedListings = [NSArray arrayWithObjects: @"eBay", nil];
-    _currentListings = [NSArray arrayWithObjects: @"eBay_completed", nil];
-    
+    if (self) {
+        _completedListings = [NSArray arrayWithObjects: @"eBay", nil];
+        _currentListings = [NSArray arrayWithObjects: @"eBay_completed", nil];
+    }
     return self;
+}
+
+- (void) parseJSON:(NSString*) json
+{
+    
 }
 
 - (NSArray*) getCompletedListings

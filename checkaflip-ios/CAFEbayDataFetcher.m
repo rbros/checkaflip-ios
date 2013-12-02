@@ -25,7 +25,7 @@
     NSData* json = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
     NSString* jsonstr = [[NSString alloc] initWithData:json encoding:NSASCIIStringEncoding];
-    return [[CAFEbaySearchResult alloc] init];
+    return [[CAFEbaySearchResult alloc] initWithJSONStr:jsonstr];
 }
 
 @end
