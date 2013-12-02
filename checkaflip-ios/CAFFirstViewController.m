@@ -8,11 +8,15 @@
 
 #import "CAFFirstViewController.h"
 #import "CAFEbayDataFetcher.h"
+#import "CAFEbaySearchResult.h"
 
 @interface CAFFirstViewController ()
 @end
 
 @implementation CAFFirstViewController
+{
+    CAFEbaySearchResult* _ebaysr;
+}
 - (IBAction)onSegmentControlChanged:(UISegmentedControl *)sender {
     [self.tableView reloadData];
 }
@@ -40,26 +44,27 @@
     
     // load data from http
     CAFEbayDataFetcher* ebaydf = [[CAFEbayDataFetcher alloc] init];
-    [ebaydf search: self.searchBar.text];
+    _ebaysr = [ebaydf search: self.searchBar.text];
 
     // populate completed and current lists
     [self.searchBar resignFirstResponder];
 }
 
-- (UITableViewCell*) tableView:(UITableViewCell*) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell*) tableView:(UITableViewCell*) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
     
-    //static NSString* cellIdentifier = @"GenericCell";
-    
-//    UITableViewCell* cell = [[[NSBundle mainBundle] loadNibNamed: @"GenericCell" owner:self options:nil] objectAtIndex: 0];
-//    
-//    if (self.ebaySegmentedControl.selectedSegmentIndex == 0) {
-//        cell.textLabel.text = @"EBAY";
-//    } else {
-//        cell.textLabel.text = @"EBAY_CURRENT";
-//    }
-//
-//    return cell;
-    return nil;
+    if (self.ebaySegmentedControl.selectedSegmentIndex == 0) {
+        cell.textLabel.text = @"EBAY";
+    } else {
+        cell.textLabel.text = @"EBAY_CURRENT";
+    }
+
+    return cell;
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
@@ -69,6 +74,10 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    if (self.ebaySegmentedControl.selectedSegmentIndex == 0) {
+        return [[_ebaysr getCompletedListings] count];
+    } else {
+        return [[_ebaysr getCurrentListings] count];
+    }
 }
 @end

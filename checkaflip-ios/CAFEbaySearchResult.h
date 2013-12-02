@@ -9,5 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface CAFEbaySearchResult : NSObject
+{
+}
+
+- (NSArray*) getCompletedListings;
+- (NSArray*) getCurrentListings;
+
 
 @end
