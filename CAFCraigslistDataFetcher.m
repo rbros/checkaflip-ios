@@ -25,6 +25,8 @@
     
     NSData* json = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
+    
+    // TODO: if error is not null return empty search result.
     return [[CAFCraigslistSearchResult alloc] initWithJSONData:json];
 }
 @end

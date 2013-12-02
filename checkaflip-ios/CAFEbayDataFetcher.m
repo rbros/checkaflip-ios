@@ -24,6 +24,7 @@
     
     NSData* json = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
+    // TODO: If error is not null we need to return an empty search result.
     return [[CAFEbaySearchResult alloc] initWithJSONData:json];
 }
 
