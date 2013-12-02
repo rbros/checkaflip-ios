@@ -11,5 +11,6 @@
 @interface CAFListingItem : NSObject
 
 - (id) initWithDict:(NSDictionary*) json;
+- (NSString*) getTitle;
 
 @end

@@ -28,4 +28,9 @@
     return self;
 }
 
+- (NSString*) getTitle
+{
+    return _title;
+}
+
 @end

@@ -42,12 +42,13 @@
         NSString* title = listing[@"title"];
         
         CAFListingItem* item = [[CAFListingItem alloc] initWithDict:listing];
-        [_completedListings addObject:title];
+        [_completedListings addObject:item];
     }
     
     NSArray* currentListings = json[@"currentListings"];
     for (NSDictionary* listing in currentListings) {
-        [_currentListings addObject:listing[@"title"]];
+        CAFListingItem* item = [[CAFListingItem alloc] initWithDict:listing];
+        [_currentListings addObject:item];
     }
 }
 

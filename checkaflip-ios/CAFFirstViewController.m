@@ -10,6 +10,7 @@
 #import "CAFFirstViewController.h"
 #import "CAFEbayDataFetcher.h"
 #import "CAFEbaySearchResult.h"
+#import "CAFListingItem.h"
 
 @interface CAFFirstViewController ()
 @end
@@ -78,7 +79,9 @@
     }
     
     if (_ebaysr && self.ebaySegmentedControl.selectedSegmentIndex == 0) {
-        cell.textLabel.text = [[_ebaysr getCompletedListings] objectAtIndex:indexPath.row];
+
+        CAFListingItem* item = [[_ebaysr getCompletedListings] objectAtIndex:indexPath.row];
+        cell.textLabel.text = [item getTitle];
     } else if (_ebaysr) {
         cell.textLabel.text = [[_ebaysr getCurrentListings] objectAtIndex:indexPath.row];
     }
