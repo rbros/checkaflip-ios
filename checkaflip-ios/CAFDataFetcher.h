@@ -15,6 +15,7 @@
 
 - (void) search:(NSString*) key :(BOOL) n;
 - (NSString*) getCurrentSearchKey;
+- (void) setCurrentSearchKey:(NSString*)key;
 - (void) setNew:(BOOL) n;
 - (BOOL) getNew;
 - (CAFEbaySearchResult*) getEbaySearchResult;

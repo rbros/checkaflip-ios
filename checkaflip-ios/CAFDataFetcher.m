@@ -44,6 +44,11 @@
     return _currentKey;
 }
 
+- (void) setCurrentSearchKey:(NSString *)key
+{
+    _currentKey = key;
+}
+
 - (void) setNew:(BOOL)n
 {
     _currentNew = n;

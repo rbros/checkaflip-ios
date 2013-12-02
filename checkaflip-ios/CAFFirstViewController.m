@@ -32,7 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -51,6 +52,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) dismissKeyboard {
+    [self.searchBar resignFirstResponder];
+}
+
+-(void) searchBar:(UISearchBar*)searchBar textDidChange:(NSString *)searchText
+{
+    // load data from http
+    CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
+    CAFDataFetcher* df = app.getDataFetcher;
+    [df setCurrentSearchKey:searchText];
 }
 
 - (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar

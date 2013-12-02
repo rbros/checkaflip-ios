@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160B52A2184D360300FBF15A /* CAFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160B52A1184D360300FBF15A /* CAFViewController.m */; };
 		162AC3D3184B03AC00E9FCCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162AC3D2184B03AC00E9FCCF /* Foundation.framework */; };
 		162AC3D5184B03AC00E9FCCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162AC3D4184B03AC00E9FCCF /* CoreGraphics.framework */; };
 		162AC3D7184B03AC00E9FCCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162AC3D6184B03AC00E9FCCF /* UIKit.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		160B52A0184D360300FBF15A /* CAFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAFViewController.h; sourceTree = "<group>"; };
+		160B52A1184D360300FBF15A /* CAFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAFViewController.m; sourceTree = "<group>"; };
 		162AC3CF184B03AC00E9FCCF /* checkaflip-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "checkaflip-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		162AC3D2184B03AC00E9FCCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		162AC3D4184B03AC00E9FCCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -139,6 +142,8 @@
 				162AC3E2184B03AC00E9FCCF /* CAFAppDelegate.m */,
 				162AC3E4184B03AC00E9FCCF /* Main_iPhone.storyboard */,
 				162AC3E7184B03AC00E9FCCF /* Main_iPad.storyboard */,
+				160B52A0184D360300FBF15A /* CAFViewController.h */,
+				160B52A1184D360300FBF15A /* CAFViewController.m */,
 				162AC3EA184B03AC00E9FCCF /* CAFFirstViewController.h */,
 				162AC3EB184B03AC00E9FCCF /* CAFFirstViewController.m */,
 				162AC3ED184B03AC00E9FCCF /* CAFSecondViewController.h */,
@@ -289,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				160B52A2184D360300FBF15A /* CAFViewController.m in Sources */,
 				169C6CB0184BF92700253B81 /* CAFEbaySearchResult.m in Sources */,
 				162AC3EC184B03AC00E9FCCF /* CAFFirstViewController.m in Sources */,
 				169C6CBC184C5B4900253B81 /* CAFListingItem.m in Sources */,

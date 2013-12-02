@@ -29,6 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -46,6 +48,18 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+-(void) dismissKeyboard {
+    [self.searchBar resignFirstResponder];
+}
+
+-(void) searchBar:(UISearchBar*)searchBar textDidChange:(NSString *)searchText
+{
+    // load data from http
+    CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
+    CAFDataFetcher* df = app.getDataFetcher;
+    [df setCurrentSearchKey:searchText];
 }
 
 - (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
