@@ -18,6 +18,12 @@
 {
     CAFCraigslistSearchResult* _clsr;
 }
+- (IBAction)onSliderChange:(UISwitch *)sender {
+
+    CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
+    CAFDataFetcher* df = app.getDataFetcher;
+    [df setNew:self.slider.isOn];
+}
 
 - (void)viewDidLoad
 {
@@ -31,6 +37,7 @@
     CAFDataFetcher* df = app.getDataFetcher;
     
     self.searchBar.text = df.getCurrentSearchKey;
+    self.slider.on = df.getNew;
     
     _clsr = df.getCraigslistSearchResult;
     [self.tableView reloadData];
@@ -53,7 +60,7 @@
     // load data from http
     CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
     CAFDataFetcher* df = app.getDataFetcher;
-    [df search:self.searchBar.text];
+    [df search:self.searchBar.text:self.slider.isOn];
     _clsr = df.getCraigslistSearchResult;
     
     [self.tableView reloadData];

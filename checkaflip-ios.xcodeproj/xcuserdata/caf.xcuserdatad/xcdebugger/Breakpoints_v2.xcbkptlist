@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFFirstViewController.m"
-            timestampString = "407652005.952988"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "-searchBarSearchButtonClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFFirstViewController.m"
-            timestampString = "407647421.21788"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "-onSegmentControlChanged:"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFFirstViewController.m"
-            timestampString = "407652005.952988"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "-searchBarSearchButtonClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFFirstViewController.m"
-            timestampString = "407652005.952988"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "-searchBarSearchButtonClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFFirstViewController.m"
-            timestampString = "407652005.952988"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,23 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFFirstViewController.m"
-            timestampString = "407652005.952988"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "checkaflip-ios/CAFFirstViewController.m"
-            timestampString = "407652005.952988"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
@@ -170,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFFirstViewController.m"
-            timestampString = "407652005.952988"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,11 +170,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFFirstViewController.m"
-            timestampString = "407652005.952988"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "checkaflip-ios/CAFFirstViewController.m"
+            timestampString = "407654945.228955"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFFirstViewController.m"
-            timestampString = "407652005.952988"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFFirstViewController.m"
-            timestampString = "407652005.952988"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "-numberOfSectionsInTableView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFFirstViewController.m"
-            timestampString = "407652005.952988"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "-searchBarSearchButtonClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -548,11 +548,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFFirstViewController.m"
-            timestampString = "407647421.21788"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -564,11 +564,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFSecondViewController.m"
-            timestampString = "407649586.902917"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -580,12 +580,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFDataFetcher.m"
-            timestampString = "407652005.952988"
+            timestampString = "407654769.386518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-search:"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-search::"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -596,11 +596,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFSecondViewController.m"
-            timestampString = "407652005.952988"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "-viewDidAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -612,11 +612,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFSecondViewController.m"
-            timestampString = "407652392.017359"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -628,11 +628,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFSecondViewController.m"
-            timestampString = "407652392.017359"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -644,11 +644,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFSecondViewController.m"
-            timestampString = "407652392.017359"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "5">
          </BreakpointContent>
@@ -660,11 +660,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFSecondViewController.m"
-            timestampString = "407650208.301326"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "-viewDidAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -676,12 +676,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFDataFetcher.m"
-            timestampString = "407652005.952988"
+            timestampString = "407654769.386518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "-search:"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-search::"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -692,11 +692,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFDataFetcher.m"
-            timestampString = "407652005.952988"
+            timestampString = "407654769.386518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "-getCraigslistSearchResult"
             landmarkType = "5">
          </BreakpointContent>
@@ -708,11 +708,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFDataFetcher.m"
-            timestampString = "407652005.952988"
+            timestampString = "407654769.386518"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "-getEbaySearchResult"
             landmarkType = "5">
          </BreakpointContent>
@@ -756,11 +756,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFSecondViewController.m"
-            timestampString = "407652071.446243"
+            timestampString = "407654945.228955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "-viewDidAppear:"
             landmarkType = "5">
          </BreakpointContent>

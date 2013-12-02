@@ -18,6 +18,12 @@
 {
     CAFEbaySearchResult* _ebaysr;
 }
+- (IBAction)onSliderChanged:(UISwitch *)sender {
+
+    CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
+    CAFDataFetcher* df = app.getDataFetcher;
+    [df setNew:self.slider.isOn];
+}
 - (IBAction)onSegmentControlChanged:(UISegmentedControl *)sender {
     [self.tableView reloadData];
 }
@@ -35,6 +41,7 @@
     CAFDataFetcher* df = app.getDataFetcher;
     
     self.searchBar.text = df.getCurrentSearchKey;
+    self.slider.on = df.getNew;
     
     _ebaysr = df.getEbaySearchResult;
     [self.tableView reloadData];
@@ -57,7 +64,7 @@
     // load data from http
     CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
     CAFDataFetcher* df = app.getDataFetcher;
-    [df search:self.searchBar.text];
+    [df search:self.searchBar.text:self.slider.isOn];
     _ebaysr = df.getEbaySearchResult;
     
     [self.tableView reloadData];

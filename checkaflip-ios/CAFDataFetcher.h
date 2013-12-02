@@ -13,8 +13,10 @@
 
 @interface CAFDataFetcher : NSObject
 
-- (void) search:(NSString*) key;
+- (void) search:(NSString*)key :(BOOL)n;
 - (NSString*) getCurrentSearchKey;
+- (void) setNew:(BOOL)n;
+- (BOOL) getNew;
 - (CAFEbaySearchResult*) getEbaySearchResult;
 - (CAFCraigslistSearchResult*) getCraigslistSearchResult;
 

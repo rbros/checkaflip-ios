@@ -15,6 +15,7 @@
 @implementation CAFDataFetcher
 {
     NSString* _currentKey;
+    BOOL _currentNew;
     CAFEbaySearchResult* _ebaysr;
     CAFCraigslistSearchResult* _clsr;
 }
@@ -25,9 +26,10 @@
     return self;
 }
 
-- (void) search:(NSString*)key
+- (void) search:(NSString*)key :(BOOL)n
 {
     _currentKey = key;
+    _currentNew = n;
 
     CAFEbayDataFetcher* ebaydf = [[CAFEbayDataFetcher alloc] init];
     _ebaysr = [ebaydf search:key];
@@ -40,6 +42,16 @@
 - (NSString*) getCurrentSearchKey
 {
     return _currentKey;
+}
+
+- (void) setNew:(BOOL)n
+{
+    _currentNew = n;
+}
+
+- (BOOL) getNew
+{
+    return _currentNew;
 }
 
 - (CAFEbaySearchResult*) getEbaySearchResult
