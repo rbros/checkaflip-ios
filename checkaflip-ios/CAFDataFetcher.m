@@ -9,7 +9,6 @@
 #import "CAFDataFetcher.h"
 #import "CAFEbayDataFetcher.h"
 #import "CAFEbaySearchResult.h"
-#import "CAFCraigslistDataFetcher.h"
 #import "CAFCraigslistSearchResult.h"
 
 @implementation CAFDataFetcher
@@ -31,12 +30,47 @@
     _currentKey = key;
     _currentNew = n;
 
-    CAFEbayDataFetcher* ebaydf = [[CAFEbayDataFetcher alloc] init];
-    _ebaysr = [ebaydf search:key];
-    
-    CAFCraigslistDataFetcher* cldf = [[CAFCraigslistDataFetcher alloc] init];
-    _clsr = [cldf search:key];
+    _ebaysr = [CAFDataFetcher searchEbay:key:n];
+    _clsr = [CAFDataFetcher searchCraigslist:key:n];
+}
 
++ (CAFEbaySearchResult*)searchEbay:(NSString*) key:(BOOL)new
+{
+    // Make http request for JSON.
+    NSString* server = [NSString stringWithFormat:@"http://checkaflip.com/searchEbay/?q=%@&new=false&json=true", key];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server]
+                                                           cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
+    
+    [request setHTTPMethod:@"GET"];
+    
+    NSError* error;
+    NSURLResponse* response = nil;
+    
+    NSData* json = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    if (error)
+        return nil;
+    
+    return [[CAFEbaySearchResult alloc] initWithJSONData:json];
+}
+
++ (CAFCraigslistSearchResult*)searchCraigslist:(NSString*) key:(BOOL)new
+{
+    // Make http request for JSON.
+    NSString* server = [NSString stringWithFormat:@"http://checkaflip.com/searchCraigslist/?q=%@&new=false&city=houston&json=true", key];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server]
+                                                           cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
+    
+    [request setHTTPMethod:@"GET"];
+    
+    NSError* error;
+    NSURLResponse* response = nil;
+    
+    NSData* json = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    
+    // TODO: if error is not null return empty search result.
+    return [[CAFCraigslistSearchResult alloc] initWithJSONData:json];
 }
 
 - (NSString*) getCurrentSearchKey

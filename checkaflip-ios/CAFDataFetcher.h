@@ -21,4 +21,7 @@
 - (CAFEbaySearchResult*) getEbaySearchResult;
 - (CAFCraigslistSearchResult*) getCraigslistSearchResult;
 
++ (CAFEbaySearchResult*) searchEbay:(NSString*)key :(BOOL)n;
++ (CAFCraigslistSearchResult*) searchCraigslist:(NSString*)key :(BOOL)n;
+
 @end

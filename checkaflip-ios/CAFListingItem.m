@@ -23,8 +23,13 @@
         _title = dict[@"title"];
         _currentPrice = dict[@"currentPrice"];
         _link = dict[@"link"];
-        _img = dict[@"imageURL"];
+        
+        _img = @"";
+        if (dict[@"imageURL"]) {
+            _img = dict[@"imageURL"];
+        }
     }
+    
     return self;
 }
 
