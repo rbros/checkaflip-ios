@@ -45,12 +45,13 @@
     // load data from http
     CAFEbayDataFetcher* ebaydf = [[CAFEbayDataFetcher alloc] init];
     _ebaysr = [ebaydf search: self.searchBar.text];
+    [self.tableView reloadData];
 
     // populate completed and current lists
     [self.searchBar resignFirstResponder];
 }
 
-- (UITableViewCell*) tableView:(UITableViewCell*) tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
     UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
@@ -58,10 +59,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
-    if (self.ebaySegmentedControl.selectedSegmentIndex == 0) {
-        cell.textLabel.text = @"EBAY";
+    if (_ebaysr && self.ebaySegmentedControl.selectedSegmentIndex == 0) {
+        cell.textLabel.text = [[_ebaysr getCompletedListings] objectAtIndex:indexPath.row];
     } else {
-        cell.textLabel.text = @"EBAY_CURRENT";
+        cell.textLabel.text = [[_ebaysr getCurrentListings] objectAtIndex:indexPath.row];
     }
 
     return cell;

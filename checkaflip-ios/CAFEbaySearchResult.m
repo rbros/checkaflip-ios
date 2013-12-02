@@ -14,6 +14,16 @@
     NSArray* _currentListings;
 }
 
+- (id) init;
+{
+    self = [super init];
+    
+    _completedListings = [NSArray arrayWithObjects: @"eBay", nil];
+    _currentListings = [NSArray arrayWithObjects: @"eBay_completed", nil];
+    
+    return self;
+}
+
 - (NSArray*) getCompletedListings
 {
     return _completedListings;

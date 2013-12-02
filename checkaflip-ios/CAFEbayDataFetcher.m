@@ -13,7 +13,7 @@
 - (CAFEbaySearchResult*)search:(NSString*) key
 {
     // Make http request for JSON.
-    return nil;
+    return [[CAFEbaySearchResult alloc] init];
 }
 
 @end
