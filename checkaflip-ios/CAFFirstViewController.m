@@ -28,7 +28,6 @@
     [self.tableView reloadData];
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -57,8 +56,6 @@
 {
     // this callback can be moved to a shared delegate between craigslist and ebay tabs to always store datas at a high level.
     
-    NSLog(@"You entered %@", self.searchBar.text);
-    
     // set list loading icon.
     
     // load data from http
@@ -68,8 +65,6 @@
     _ebaysr = df.getEbaySearchResult;
     
     [self.tableView reloadData];
-
-    // populate completed and current lists
     [self.searchBar resignFirstResponder];
 }
 
@@ -77,13 +72,14 @@
 {
 
     UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
     if (_ebaysr && self.ebaySegmentedControl.selectedSegmentIndex == 0) {
         cell.textLabel.text = [[_ebaysr getCompletedListings] objectAtIndex:indexPath.row];
-    } else {
+    } else if (_ebaysr) {
         cell.textLabel.text = [[_ebaysr getCurrentListings] objectAtIndex:indexPath.row];
     }
 
@@ -97,10 +93,14 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (self.ebaySegmentedControl.selectedSegmentIndex == 0) {
-        return [[_ebaysr getCompletedListings] count];
-    } else {
-        return [[_ebaysr getCurrentListings] count];
+    int count = 0;
+    if (_ebaysr && self.ebaySegmentedControl.selectedSegmentIndex == 0) {
+        count = [[_ebaysr getCompletedListings] count];
+    } else if (_ebaysr) {
+        count = [[_ebaysr getCurrentListings] count];
     }
+    
+    return count;
 }
+
 @end

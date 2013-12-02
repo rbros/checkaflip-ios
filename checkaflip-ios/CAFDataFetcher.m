@@ -26,7 +26,7 @@
     return self;
 }
 
-- (void) search:(NSString*)key :(BOOL)n
+- (void) search:(NSString*) key :(BOOL) n
 {
     _currentKey = key;
     _currentNew = n;

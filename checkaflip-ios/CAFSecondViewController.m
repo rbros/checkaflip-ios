@@ -28,7 +28,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -46,15 +45,12 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     // this callback can be moved to a shared delegate between craigslist and ebay tabs to always store datas at a high level.
-    
-    NSLog(@"You entered %@", self.searchBar.text);
-    
+
     // set list loading icon.
     
     // load data from http
@@ -64,8 +60,6 @@
     _clsr = df.getCraigslistSearchResult;
     
     [self.tableView reloadData];
-    
-    // populate completed and current lists
     [self.searchBar resignFirstResponder];
 }
 

@@ -12,9 +12,8 @@
 {
 }
 
-- (id) initWithJSONData:(NSString*)json;
+- (id) initWithJSONData:(NSString*) json;
 - (NSArray*) getCompletedListings;
 - (NSArray*) getCurrentListings;
-
 
 @end

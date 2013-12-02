@@ -10,7 +10,7 @@
 
 @interface CAFCraigslistSearchResult : NSObject
 
-- (id) initWithJSONData:(NSString*)json;
+- (id) initWithJSONData:(NSString*) json;
 - (NSArray*) getListings;
 
 @end
