@@ -11,8 +11,6 @@
 #import "CAFCraigslistSearchResult.h"
 
 @interface CAFCraigslistDataFetcher : NSObject
-{
-}
 
 - (CAFCraigslistSearchResult*) search:(NSString*) key;
 

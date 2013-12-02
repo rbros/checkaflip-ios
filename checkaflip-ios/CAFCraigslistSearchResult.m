@@ -35,6 +35,9 @@
         return;
     }
     
+    if ([json[@"error"] boolValue] == true)
+        return;
+    
     NSArray* completedListings = json[@"completedListings"];
     for (NSDictionary* listing in completedListings) {
         CAFListingItem* item = [[CAFListingItem alloc] initWithDict:listing];

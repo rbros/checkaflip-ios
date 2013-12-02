@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CAFFirstViewController : UIViewController <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
+#import "CAFViewController.h"
 
-@property (strong, nonatomic) IBOutlet UISearchBar* searchBar;
+@interface CAFFirstViewController : CAFViewController
+
 @property (strong, nonatomic) IBOutlet UISegmentedControl* ebaySegmentedControl;
-@property (strong, nonatomic) IBOutlet UITableView* tableView;
-@property (strong, nonatomic) IBOutlet UISwitch* slider;
+
 
 @end

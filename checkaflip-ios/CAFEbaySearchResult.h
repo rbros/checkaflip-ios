@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface CAFEbaySearchResult : NSObject
-{
-}
 
 - (id) initWithJSONData:(NSData*) json;
 - (NSArray*) getCompletedListings;

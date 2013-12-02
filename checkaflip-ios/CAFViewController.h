@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CAFViewController : UIViewController
+@interface CAFViewController : UIViewController <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UISearchBar* searchBar;
+@property (strong, nonatomic) IBOutlet UISwitch* slider;
+@property (strong, nonatomic) IBOutlet UITableView* tableView;
 
 @end

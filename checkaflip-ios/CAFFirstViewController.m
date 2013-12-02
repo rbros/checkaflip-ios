@@ -19,21 +19,8 @@
 {
     CAFEbaySearchResult* _ebaysr;
 }
-- (IBAction)onSliderChanged:(UISwitch *)sender {
-
-    CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
-    CAFDataFetcher* df = app.getDataFetcher;
-    [df setNew:self.slider.isOn];
-}
 - (IBAction)onSegmentControlChanged:(UISegmentedControl *)sender {
     [self.tableView reloadData];
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
-    [self.view addGestureRecognizer:tap];
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -46,24 +33,6 @@
     
     _ebaysr = df.getEbaySearchResult;
     [self.tableView reloadData];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void) dismissKeyboard {
-    [self.searchBar resignFirstResponder];
-}
-
--(void) searchBar:(UISearchBar*)searchBar textDidChange:(NSString *)searchText
-{
-    // load data from http
-    CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
-    CAFDataFetcher* df = app.getDataFetcher;
-    [df setCurrentSearchKey:searchText];
 }
 
 - (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -85,11 +54,7 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    UITableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
+    UITableViewCell* cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     
     if (_ebaysr && self.ebaySegmentedControl.selectedSegmentIndex == 0) {
 
@@ -101,11 +66,6 @@
     }
 
     return cell;
-}
-
-- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
