@@ -83,7 +83,8 @@
         CAFListingItem* item = [[_ebaysr getCompletedListings] objectAtIndex:indexPath.row];
         cell.textLabel.text = [item getTitle];
     } else if (_ebaysr) {
-        cell.textLabel.text = [[_ebaysr getCurrentListings] objectAtIndex:indexPath.row];
+        CAFListingItem* item = [[_ebaysr getCurrentListings] objectAtIndex:indexPath.row];
+        cell.textLabel.text = [item getTitle];
     }
 
     return cell;

@@ -9,6 +9,7 @@
 #import "CAFAppDelegate.h"
 #import "CAFSecondViewController.h"
 #import "CAFCraigslistSearchResult.h"
+#import "CAFListingItem.h"
 
 @interface CAFSecondViewController ()
 
@@ -72,7 +73,8 @@
     }
     
     if (_clsr) {
-        cell.textLabel.text = [[_clsr getListings] objectAtIndex:indexPath.row];
+        CAFListingItem* item = [[_clsr getListings] objectAtIndex:indexPath.row];
+        cell.textLabel.text = [item getTitle];
     }
     
     return cell;

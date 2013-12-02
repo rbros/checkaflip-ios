@@ -7,6 +7,7 @@
 //
 
 #import "CAFCraigslistSearchResult.h"
+#import "CAFListingItem.h"
 
 @implementation CAFCraigslistSearchResult
 {
@@ -36,8 +37,8 @@
     
     NSArray* completedListings = json[@"completedListings"];
     for (NSDictionary* listing in completedListings) {
-        NSString* title = listing[@"title"];
-        [_listings addObject:title];
+        CAFListingItem* item = [[CAFListingItem alloc] initWithDict:listing];
+        [_listings addObject:item];
     }
 }
 
