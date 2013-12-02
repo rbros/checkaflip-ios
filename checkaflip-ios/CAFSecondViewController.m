@@ -42,6 +42,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    // this callback can be moved to a shared delegate between craigslist and ebay tabs to always store datas at a high level.
+    
+    NSLog(@"You entered %@", self.searchBar.text);
+    
+    // set list loading icon.
+    
+    // load data from http
+    CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
+    CAFDataFetcher* df = app.getDataFetcher;
+    [df search:self.searchBar.text];
+    _clsr = df.getCraigslistSearchResult;
+    
+    [self.tableView reloadData];
+    
+    // populate completed and current lists
+    [self.searchBar resignFirstResponder];
+}
+
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     

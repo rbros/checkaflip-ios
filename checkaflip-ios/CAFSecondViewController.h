@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CAFSecondViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface CAFSecondViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView* tableView;
 @property (strong, nonatomic) IBOutlet UISearchBar* searchBar;
