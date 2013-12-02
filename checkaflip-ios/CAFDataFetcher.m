@@ -11,6 +11,8 @@
 #import "CAFEbaySearchResult.h"
 #import "CAFCraigslistSearchResult.h"
 
+NSString* cafurl = @"http://checkaflip.com/";
+
 @implementation CAFDataFetcher
 {
     NSString* _currentKey;
@@ -37,7 +39,7 @@
 + (CAFEbaySearchResult*)searchEbay:(NSString*) key:(BOOL)new
 {
     // Make http request for JSON.
-    NSString* server = [NSString stringWithFormat:@"http://checkaflip.com/searchEbay/?q=%@&new=false&json=true", key];
+    NSString* server = [NSString stringWithFormat:@"%@searchEbay/?q=%@&new=false&json=true", cafurl, key];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server]
                                                            cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
     
