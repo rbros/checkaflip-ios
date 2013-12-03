@@ -20,8 +20,9 @@
 - (BOOL) getNew;
 - (CAFEbaySearchResult*) getEbaySearchResult;
 - (CAFCraigslistSearchResult*) getCraigslistSearchResult;
+- (NSString*) getCityFromLocation;
 
-+ (CAFEbaySearchResult*) searchEbay:(NSString*)key :(BOOL)n;
++ (CAFEbaySearchResult*) searchEbay:(NSString*)key :(BOOL)n :(NSString*)city;
 + (CAFCraigslistSearchResult*) searchCraigslist:(NSString*)key :(BOOL)n;
 
 @end

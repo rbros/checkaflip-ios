@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 CheckAFlip. All rights reserved.
 //
 
+#import <CoreLocation/CoreLocation.h>
+
 #import "CAFDataFetcher.h"
 #import "CAFEbayDataFetcher.h"
 #import "CAFEbaySearchResult.h"
@@ -19,11 +21,19 @@ NSString* cafurl = @"http://checkaflip.com/";
     BOOL _currentNew;
     CAFEbaySearchResult* _ebaysr;
     CAFCraigslistSearchResult* _clsr;
+    CLLocationManager* lm;
 }
 
 - (id) init
 {
     self = [super self];
+    if (self) {
+        
+        lm = [[CLLocationManager alloc] init];
+        lm.distanceFilter = kCLDistanceFilterNone;
+        lm.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+        [lm startUpdatingLocation];
+    }
     return self;
 }
 
@@ -33,7 +43,19 @@ NSString* cafurl = @"http://checkaflip.com/";
     _currentNew = n;
 
     _ebaysr = [CAFDataFetcher searchEbay:key:n];
-    _clsr = [CAFDataFetcher searchCraigslist:key:n];
+
+    NSUserDefaults* prefs = [NSUserDefaults standardUserDefaults];
+    BOOL manual = [prefs boolForKey:@"cl_manual_city"];
+    
+    NSString* city = @"wichita";
+    if (manual)
+        city = [prefs objectForKey:@"cl_city_name"];
+    else {
+        // get location by gps.
+        city = self.getCityFromLocation;
+    }
+
+    _clsr = [CAFDataFetcher searchCraigslist:key:n:city];
 }
 
 + (CAFEbaySearchResult*)searchEbay:(NSString*) key:(BOOL)new
@@ -55,15 +77,8 @@ NSString* cafurl = @"http://checkaflip.com/";
     return [[CAFEbaySearchResult alloc] initWithJSONData:json];
 }
 
-+ (CAFCraigslistSearchResult*)searchCraigslist:(NSString*) key:(BOOL)new
++ (CAFCraigslistSearchResult*)searchCraigslist:(NSString*) key:(BOOL)new :(NSString*)city
 {
-    NSUserDefaults* prefs = [NSUserDefaults standardUserDefaults];
-    BOOL manual = [prefs boolForKey:@"cl_manual_city"];
-    
-    NSString* city = @"wichita";
-    if (manual)
-        city = [prefs objectForKey:@"cl_city_name"];
-    
     NSString* server = [NSString stringWithFormat:@"http://checkaflip.com/searchCraigslist/?q=%@&new=false&city=%@&json=true", key, city];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server]
                                                            cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
@@ -79,6 +94,36 @@ NSString* cafurl = @"http://checkaflip.com/";
         return nil;
 
     return [[CAFCraigslistSearchResult alloc] initWithJSONData:json];
+}
+
+- (NSString*) getCityFromLocation
+{
+    NSString* city = nil;
+    
+    NSString* lat = @"33.748995";
+    NSString* lon = @"-84.387982";
+    
+    lat = [NSString stringWithFormat:@"%f", lm.location.coordinate.latitude];
+    lon = [NSString stringWithFormat:@"%f", lm.location.coordinate.longitude];
+    
+    NSString* server = [NSString stringWithFormat:@"http://checkaflip.com/getcity/?lat=%@&lon=%@", lat, lon];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server]
+                                                           cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
+    
+    [request setHTTPMethod:@"GET"];
+    
+    NSError* error;
+    NSURLResponse* response = nil;
+    
+    NSData* html = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    NSString* data = [NSString stringWithUTF8String:[html bytes]];
+    
+    NSScanner* scanner = [NSScanner scannerWithString:data];
+    [scanner scanUpToString:@"value=\"" intoString:nil];
+    [scanner scanUpToString:@"\">" intoString:&city];
+    
+    return city;
 }
 
 - (NSString*) getCurrentSearchKey
