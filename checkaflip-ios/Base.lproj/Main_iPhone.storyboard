@@ -181,7 +181,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="96M-jP-OP6"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="first" id="96M-jP-OP6"/>
                     <connections>
                         <outlet property="cityLabel" destination="woY-9a-LA2" id="E3K-Lp-zmd"/>
                         <outlet property="manualCitySwitch" destination="4gp-Nv-YH1" id="4gw-Io-jvp"/>
