@@ -38,7 +38,11 @@
 
 - (void) updateValueLabel
 {
-    self.valueLabel.text = _ebaysr.getCurrentPrice;
+    if (_ebaysr && self.ebaySegmentedControl.selectedSegmentIndex == 0) {
+        self.valueLabel.text = _ebaysr.getCompletedValue;
+    } else if (_ebaysr) {
+        self.valueLabel.text = _ebaysr.getCurrentValue;
+    }
 }
 
 - (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -84,6 +88,7 @@
         count = [[_ebaysr getCurrentListings] count];
     }
     
+    [self updateValueLabel];
     return count;
 }
 

@@ -12,7 +12,8 @@
 
 - (id) initWithJSONData:(NSData*) json;
 - (NSArray*) getCompletedListings;
+- (NSString*) getCompletedValue;
 - (NSArray*) getCurrentListings;
-- (NSString*) getCurrentPrice;
+- (NSString*) getCurrentValue;
 
 @end

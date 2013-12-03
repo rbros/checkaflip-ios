@@ -34,7 +34,7 @@
 
 - (void) updateValueLabel
 {
-    self.valueLabel.text = _clsr.getCurrentPrice;
+    self.valueLabel.text = _clsr.getCurrentValue;
 }
 
 - (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
