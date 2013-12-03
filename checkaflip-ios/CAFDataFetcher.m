@@ -28,13 +28,27 @@ NSString* cafurl = @"http://checkaflip.com/";
 {
     self = [super self];
     if (self) {
-        
+
         lm = [[CLLocationManager alloc] init];
         lm.distanceFilter = kCLDistanceFilterNone;
         lm.desiredAccuracy = kCLLocationAccuracyHundredMeters;
         [lm startUpdatingLocation];
+        
+        NSUserDefaults* prefs = [NSUserDefaults standardUserDefaults];
+        [prefs addObserver:self forKeyPath:@"cl_manual_city"
+                   options:NSKeyValueObservingOptionNew context:nil];
+
+        if ([prefs boolForKey:@"cl_manual_city"])
+            [lm stopUpdatingLocation];
     }
     return self;
+}
+
+- (void) observeValueForKeyPath:(NSString*) keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"cl_manual_city"])
+        [lm startUpdatingLocation];
+    else
+        [lm stopUpdatingLocation];
 }
 
 - (void) search:(NSString*) key :(BOOL) n

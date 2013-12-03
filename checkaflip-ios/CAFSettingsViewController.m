@@ -14,6 +14,7 @@
 }
 - (IBAction) manualCitySwitchChanged:(UISwitch *)sender {
     self.selectCityButton.enabled = sender.on;
+    self.cityLabel.enabled = sender.on;
     [[NSUserDefaults standardUserDefaults] setBool:sender.on forKey:@"cl_manual_city"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -41,6 +42,7 @@
     [self.manualCitySwitch setOn:manual];
     [self.selectCityButton setTitle:city forState:UIControlStateNormal];
     self.selectCityButton.enabled = self.manualCitySwitch.on;
+    self.cityLabel.enabled = self.manualCitySwitch.on;
 }
 
 - (void) viewWillAppear:(BOOL)animated

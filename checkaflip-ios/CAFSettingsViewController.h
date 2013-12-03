@@ -12,5 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *selectCityButton;
 @property (strong, nonatomic) IBOutlet UISwitch *manualCitySwitch;
+@property (strong, nonatomic) IBOutlet UILabel *cityLabel;
 
 @end
