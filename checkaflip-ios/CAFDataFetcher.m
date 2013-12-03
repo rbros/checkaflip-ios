@@ -57,7 +57,14 @@ NSString* cafurl = @"http://checkaflip.com/";
 
 + (CAFCraigslistSearchResult*)searchCraigslist:(NSString*) key:(BOOL)new
 {
-    NSString* server = [NSString stringWithFormat:@"http://checkaflip.com/searchCraigslist/?q=%@&new=false&city=houston&json=true", key];
+    NSUserDefaults* prefs = [NSUserDefaults standardUserDefaults];
+    BOOL manual = [prefs boolForKey:@"cl_manual_city"];
+    
+    NSString* city = @"wichita";
+    if (manual)
+        city = [prefs objectForKey:@"cl_city_name"];
+    
+    NSString* server = [NSString stringWithFormat:@"http://checkaflip.com/searchCraigslist/?q=%@&new=false&city=%@&json=true", key, city];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server]
                                                            cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
     

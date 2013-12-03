@@ -30,9 +30,6 @@
 - (void) update
 {
     NSUserDefaults* prefs = [NSUserDefaults standardUserDefaults];
-    
-    // make exception for initial load.
-    
     NSString* city = [prefs objectForKey:@"cl_city_name"];
     BOOL manual = [prefs boolForKey:@"cl_manual_city"];
     
