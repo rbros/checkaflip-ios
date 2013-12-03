@@ -38,7 +38,6 @@ NSString* cafurl = @"http://checkaflip.com/";
 
 + (CAFEbaySearchResult*)searchEbay:(NSString*) key:(BOOL)new
 {
-    // Make http request for JSON.
     NSString* server = [NSString stringWithFormat:@"%@searchEbay/?q=%@&new=false&json=true", cafurl, key];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server]
                                                            cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
@@ -58,7 +57,6 @@ NSString* cafurl = @"http://checkaflip.com/";
 
 + (CAFCraigslistSearchResult*)searchCraigslist:(NSString*) key:(BOOL)new
 {
-    // Make http request for JSON.
     NSString* server = [NSString stringWithFormat:@"http://checkaflip.com/searchCraigslist/?q=%@&new=false&city=houston&json=true", key];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server]
                                                            cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
@@ -70,7 +68,9 @@ NSString* cafurl = @"http://checkaflip.com/";
     
     NSData* json = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
-    // TODO: if error is not null return empty search result.
+    if (error)
+        return nil;
+
     return [[CAFCraigslistSearchResult alloc] initWithJSONData:json];
 }
 

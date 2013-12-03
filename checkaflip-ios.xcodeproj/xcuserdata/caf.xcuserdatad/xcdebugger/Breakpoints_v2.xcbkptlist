@@ -774,11 +774,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFDataFetcher.m"
-            timestampString = "407721375.499669"
+            timestampString = "407721844.070546"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "+searchCraigslist::"
             landmarkType = "5">
          </BreakpointContent>
@@ -790,11 +790,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "checkaflip-ios/CAFDataFetcher.m"
-            timestampString = "407721375.499669"
+            timestampString = "407721844.070546"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "+searchEbay::"
             landmarkType = "5">
          </BreakpointContent>
