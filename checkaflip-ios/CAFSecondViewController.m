@@ -32,6 +32,11 @@
     [self.tableView reloadData];
 }
 
+- (void) updateValueLabel
+{
+    self.valueLabel.text = _clsr.getCurrentPrice;
+}
+
 - (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     // this callback can be moved to a shared delegate between craigslist and ebay tabs to always store datas at a high level.
@@ -45,6 +50,7 @@
     _clsr = df.getCraigslistSearchResult;
     
     [self.tableView reloadData];
+    [self updateValueLabel];
     [self.searchBar resignFirstResponder];
 }
 

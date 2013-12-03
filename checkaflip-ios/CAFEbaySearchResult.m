@@ -13,6 +13,7 @@
 {
     NSMutableArray* _completedListings;
     NSMutableArray* _currentListings;
+    NSString* _currentPrice;
 }
 
 - (id) initWithJSONData:(NSData*) json;
@@ -22,6 +23,7 @@
     if (self) {
         _completedListings = [[NSMutableArray alloc] init];
         _currentListings = [[NSMutableArray alloc] init];
+        _currentPrice = @"asdfasdf";
         [self parseJSON:json];
     }
     return self;
@@ -36,7 +38,7 @@
         NSLog(@"JSONObjectWithData error: %@", error);
         return;
     }
-
+    
     NSArray* completedListings = json[@"completedListings"];
     for (NSDictionary* listing in completedListings) {
         
@@ -44,6 +46,7 @@
         [_completedListings addObject:item];
     }
     
+    _currentPrice = json[@"currentPrice"];
     NSArray* currentListings = json[@"currentListings"];
     for (NSDictionary* listing in currentListings) {
         CAFListingItem* item = [[CAFListingItem alloc] initWithDict:listing];
@@ -59,6 +62,11 @@
 - (NSArray*) getCurrentListings
 {
     return _currentListings;
+}
+
+- (NSString*) getCurrentPrice
+{
+    return _currentPrice;
 }
 
 @end

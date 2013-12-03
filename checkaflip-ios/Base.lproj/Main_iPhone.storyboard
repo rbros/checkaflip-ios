@@ -28,7 +28,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="71j-vL-8fy">
-                                <rect key="frame" x="0.0" y="101" width="320" height="411"/>
+                                <rect key="frame" x="0.0" y="143" width="320" height="369"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -51,6 +51,12 @@
                                     <action selector="onSliderChanged:" destination="CZ4-MO-1fc" eventType="valueChanged" id="KB5-Lf-zgH"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIy-eT-ytU">
+                                <rect key="frame" x="0.0" y="101" width="320" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -60,6 +66,7 @@
                         <outlet property="searchBar" destination="Mwy-ZO-9iT" id="1JE-pN-9ZZ"/>
                         <outlet property="slider" destination="uci-UD-3tR" id="aX7-P4-lLM"/>
                         <outlet property="tableView" destination="71j-vL-8fy" id="tcR-QL-Kzl"/>
+                        <outlet property="valueLabel" destination="qIy-eT-ytU" id="6Mt-ei-EM6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
@@ -87,7 +94,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SKy-de-JBU">
-                                <rect key="frame" x="0.0" y="65" width="320" height="448"/>
+                                <rect key="frame" x="0.0" y="125" width="320" height="388"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -102,6 +109,12 @@
                                     <action selector="onSliderChanged:" destination="QUy-BD-bpt" eventType="valueChanged" id="bJa-RL-ANB"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5O-Ix-CrP">
+                                <rect key="frame" x="0.0" y="65" width="320" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -110,6 +123,7 @@
                         <outlet property="searchBar" destination="s2D-q0-kjk" id="UHi-FO-FIK"/>
                         <outlet property="slider" destination="gdN-ov-3ec" id="0Vq-wm-7x5"/>
                         <outlet property="tableView" destination="SKy-de-JBU" id="h8A-tO-F4n"/>
+                        <outlet property="valueLabel" destination="E5O-Ix-CrP" id="epV-ha-qW8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>

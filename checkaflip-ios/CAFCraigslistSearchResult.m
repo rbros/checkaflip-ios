@@ -12,6 +12,7 @@
 @implementation CAFCraigslistSearchResult
 {
     NSMutableArray* _listings;
+    NSString* _currentPrice;
 }
 
 - (id) initWithJSONData:(NSData*) json;
@@ -20,6 +21,7 @@
     
     if (self) {
         _listings = [[NSMutableArray alloc] init];
+        _currentPrice = @"DKFJDF";
         [self parseJSON:json];
     }
     return self;
@@ -38,6 +40,7 @@
     if ([json[@"error"] boolValue] == true)
         return;
     
+    _currentPrice = json[@"medianValue"];
     NSArray* completedListings = json[@"completedListings"];
     for (NSDictionary* listing in completedListings) {
         CAFListingItem* item = [[CAFListingItem alloc] initWithDict:listing];
@@ -48,6 +51,11 @@
 - (NSArray*) getListings
 {
     return _listings;
+}
+
+- (NSString*) getCurrentPrice
+{
+    return _currentPrice;
 }
 
 

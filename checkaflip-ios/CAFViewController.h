@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UISearchBar* searchBar;
 @property (strong, nonatomic) IBOutlet UISwitch* slider;
+@property (strong, nonatomic) IBOutlet UILabel *valueLabel;
 @property (strong, nonatomic) IBOutlet UITableView* tableView;
 
 @end

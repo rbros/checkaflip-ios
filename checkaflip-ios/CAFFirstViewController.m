@@ -33,6 +33,12 @@
     
     _ebaysr = df.getEbaySearchResult;
     [self.tableView reloadData];
+    [self updateValueLabel];
+}
+
+- (void) updateValueLabel
+{
+    self.valueLabel.text = _ebaysr.getCurrentPrice;
 }
 
 - (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -48,6 +54,7 @@
     _ebaysr = df.getEbaySearchResult;
     
     [self.tableView reloadData];
+    [self updateValueLabel];
     [self.searchBar resignFirstResponder];
 }
 
