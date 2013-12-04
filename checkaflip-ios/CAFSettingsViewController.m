@@ -52,7 +52,11 @@
 
 - (IBAction)showActionSheet:(id)sender {
     UIActionSheet* as = [[UIActionSheet alloc] initWithTitle:@"Craigslist City" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:nil];
-    
+
+    NSUserDefaults* prefs = [NSUserDefaults standardUserDefaults];
+    NSString* c = [prefs objectForKey:@"cl_city_name"];
+    if ([_cities containsObject:c])
+        [as addButtonWithTitle:c];
     for (NSString* city in _cities)
         [as addButtonWithTitle:city];
     
@@ -62,7 +66,11 @@
 
 - (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSString* city = [_cities objectAtIndex:buttonIndex];
+    // Cancel button or current city.
+    if (buttonIndex == 0)
+        return;
+
+    NSString* city = [_cities objectAtIndex:buttonIndex-1];
     [self.selectCityButton setTitle:city forState:UIControlStateNormal];
     [[NSUserDefaults standardUserDefaults] setObject:city forKey:@"cl_city_name"];
     [[NSUserDefaults standardUserDefaults] synchronize];
