@@ -66,7 +66,7 @@
         UIWebView* pricelabel = (UIWebView*) [cell.contentView viewWithTag:3];
         
         titlelabel.text = [item getTitle];
-        [pricelabel loadHTMLString:[item getPrice] baseURL:[NSURL URLWithString:@"" ]];
+        [pricelabel loadHTMLString:[NSString stringWithFormat:@"<div align='right' style='font-size: 13px; font-weight: 500;'>%@<div>",[item getPrice]] baseURL:[NSURL URLWithString:@"" ]];
     }
     
     return cell;
