@@ -64,7 +64,6 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"EbayCellIdent"];
     
     CAFListingItem* item = nil;
@@ -79,18 +78,10 @@
         
         UIImageView* imgholder = (UIImageView*) [cell.contentView viewWithTag:1];
         UITextView* titlelabel = (UITextView*) [cell.contentView viewWithTag:2];
-        UITextView* pricelabel = (UITextView*) [cell.contentView viewWithTag:3];
-        
-        
+        UIWebView* pricelabel = (UIWebView*) [cell.contentView viewWithTag:3];
 
         titlelabel.text = [item getTitle];
-        pricelabel.text = [item getPrice];
-        
-        CGSize size = [pricelabel.text sizeWithFont:pricelabel.font ];
-        
-        
-        CGRect frame = pricelabel.frame;
-        frame.size.width = size.width;
+        [pricelabel loadHTMLString:[item getPrice] baseURL:[NSURL URLWithString:@"" ]];
         
         // if img is null set placeholder and make dispatch_asnyc
         //imgholder.image = nil; // [UIImage imageName:@"placeholder.jpg"
@@ -106,6 +97,7 @@
             });
         });
     }
+
     return cell;
 }
 

@@ -49,7 +49,15 @@
 
     NSArray* completedListings = json[@"completedListings"];
     for (NSDictionary* listing in completedListings) {
-        
+
+        BOOL hasBids = [listing[@"hasBids"] boolValue];
+        BOOL sold = [listing[@"sold"] boolValue];
+        if (sold || hasBids) {
+            NSString* p = listing[@"currentPrice"];
+            p = [NSString stringWithFormat:@"<font color='#2ecc71'>%@</font>", p];
+            [listing setValue:p forKey:@"currentPrice"];
+        }
+
         CAFListingItem* item = [[CAFListingItem alloc] initWithDict:listing];
         [_completedListings addObject:item];
     }
@@ -64,6 +72,15 @@
 
     NSArray* currentListings = json[@"currentListings"];
     for (NSDictionary* listing in currentListings) {
+
+        BOOL hasBids = [listing[@"hasBids"] boolValue];
+        BOOL sold = [listing[@"sold"] boolValue];
+        if (sold || hasBids) {
+            NSString* p = listing[@"currentPrice"];
+            p = [NSString stringWithFormat:@"<font color='#2ecc71'>%@</font>", p];
+            [listing setValue:p forKey:@"currentPrice"];
+        }
+
         CAFListingItem* item = [[CAFListingItem alloc] initWithDict:listing];
         [_currentListings addObject:item];
     }
