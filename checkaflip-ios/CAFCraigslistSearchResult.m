@@ -44,7 +44,7 @@
         return;
     }
 
-    _currentValue = [NSString stringWithFormat:@"Value: %@", json[@"medianValue"]];
+    _currentValue = [NSString stringWithFormat:@"Average: %@\nMedian: %@\nRange: %@", json[@"estimatedValue"], json[@"medianValue"], json[@"range"]];
     NSArray* completedListings = json[@"completedListings"];
     for (NSDictionary* listing in completedListings) {
 
