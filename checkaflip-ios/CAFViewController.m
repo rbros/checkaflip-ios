@@ -64,7 +64,7 @@
         
         UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
         CAFWebViewController* webview = [sb instantiateViewControllerWithIdentifier:@"CAFWebViewController"];
-        [webview initialize:url:@"eBay"];
+        [webview initialize:url];
         [self presentViewController:webview animated:YES completion:nil];
     }
 }

@@ -12,6 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UIWebView* webView;
 
-- (void) initialize:(NSURL*)withURL :(NSString*)andTitle;
+- (void) initialize:(NSURL*)withURL;
 
 @end

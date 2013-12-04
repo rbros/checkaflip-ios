@@ -20,7 +20,7 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
-- (void) initialize:(NSURL*) withURL:(NSString*) andTitle
+- (void) initialize:(NSURL*) withURL
 {
     _url = withURL;
 }
@@ -28,7 +28,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+
     NSURLRequest* request = [NSURLRequest requestWithURL:_url];
     [self.webView loadRequest:request];
 }
