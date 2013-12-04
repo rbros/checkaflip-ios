@@ -63,10 +63,10 @@
         CAFListingItem* item = [[self getDisplayedListings] objectAtIndex:indexPath.row];
         
         UITextView* titlelabel = (UITextView*) [cell.contentView viewWithTag:2];
-        UILabel* pricelabel = (UILabel*) [cell.contentView viewWithTag:3];
+        UIWebView* pricelabel = (UIWebView*) [cell.contentView viewWithTag:3];
         
         titlelabel.text = [item getTitle];
-        pricelabel.text = [item getPrice];
+        [pricelabel loadHTMLString:[item getPrice] baseURL:[NSURL URLWithString:@"" ]];
     }
     
     return cell;

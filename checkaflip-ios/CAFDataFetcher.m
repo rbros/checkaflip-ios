@@ -75,7 +75,7 @@ NSString* cafurl = @"http://checkaflip.com/";
             city = self.getCityFromLocation;
         }
 
-        _clsr = [CAFDataFetcher searchCraigslist:quotedkey:n:city];
+        _clsr = [CAFDataFetcher searchCraigslist:quotedkey:n:city:[_ebaysr getCompletedValue]];
 
         [[NSNotificationCenter defaultCenter] postNotificationName:@"SEARCH_COMPLETE" object:self];
     }];
@@ -99,7 +99,7 @@ NSString* cafurl = @"http://checkaflip.com/";
     return [[CAFEbaySearchResult alloc] initWithJSONData:json];
 }
 
-+ (CAFCraigslistSearchResult*)searchCraigslist:(NSString*) key:(BOOL)new :(NSString*)city
++ (CAFCraigslistSearchResult*)searchCraigslist:(NSString*) key:(BOOL)new :(NSString*)city:(NSString*)ebayAvg
 {
     NSString* server = [NSString stringWithFormat:@"%@searchCraigslist/?q=%@&new=false&city=%@&json=true", cafurl, key, city];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server]
@@ -115,7 +115,7 @@ NSString* cafurl = @"http://checkaflip.com/";
     if (error)
         return nil;
 
-    return [[CAFCraigslistSearchResult alloc] initWithJSONData:json];
+    return [[CAFCraigslistSearchResult alloc] initWithJSONData:json:ebayAvg];
 }
 
 - (NSString*) getCityFromLocation

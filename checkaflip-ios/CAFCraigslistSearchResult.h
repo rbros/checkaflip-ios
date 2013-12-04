@@ -10,7 +10,7 @@
 
 @interface CAFCraigslistSearchResult : NSObject
 
-- (id) initWithJSONData:(NSData*) json;
+- (id) initWithJSONData:(NSData*) json:(NSString*) andEbayAvg;
 - (NSArray*) getListings;
 - (NSString*) getCurrentValue;
 
