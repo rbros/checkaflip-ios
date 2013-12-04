@@ -34,6 +34,8 @@
 
 - (void) onSearchComplete:(NSNotification*) noti
 {
+    [super onSearchComplete:noti];
+
     CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
     CAFDataFetcher* df = app.getDataFetcher;
     _clsr = df.getCraigslistSearchResult;

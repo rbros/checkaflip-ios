@@ -53,6 +53,8 @@ NSString* cafurl = @"http://checkaflip.com/";
 
 - (void) search:(NSString*) key :(BOOL) n
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SEARCH_START" object:self];
+
     _currentKey = key;
     _currentNew = n;
 
@@ -77,7 +79,7 @@ NSString* cafurl = @"http://checkaflip.com/";
 
         _clsr = [CAFDataFetcher searchCraigslist:quotedkey:n:city:[_ebaysr getCompletedValue]];
 
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"SEARCH_COMPLETE" object:self];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"SEARCH_COMPLETE" object:nil];
     }];
 }
 

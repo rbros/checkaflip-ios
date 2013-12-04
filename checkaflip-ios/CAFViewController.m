@@ -24,10 +24,27 @@
 {
     [super viewDidLoad];
 
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onSearchStart:) name:@"SEARCH_START" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onSearchComplete:) name:@"SEARCH_COMPLETE" object:nil];
     
 	UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
+}
+
+- (void) onSearchStart:(NSNotification*)noti
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.valueLabel setHidden:YES];
+        [self.progressView startAnimating];
+    });
+}
+
+- (void) onSearchComplete:(NSNotification*)noti
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.progressView stopAnimating];
+        [self.valueLabel setHidden:NO];
+    });
 }
 
 - (void) update
