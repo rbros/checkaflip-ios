@@ -83,6 +83,10 @@
         titlelabel.text = [item getTitle];
         [pricelabel loadHTMLString:[NSString stringWithFormat:@"<div align='right' style='font-size: 13px; font-weight: 500;'>%@<div>",[item getPrice]] baseURL:[NSURL URLWithString:@"" ]];
         
+        CALayer* l = [imgholder layer];
+        [l setMasksToBounds:YES];
+        [l setCornerRadius:10];
+
         // if img is null set placeholder and make dispatch_asnyc
         //imgholder.image = nil; // [UIImage imageName:@"placeholder.jpg"
 
