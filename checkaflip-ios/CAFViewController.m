@@ -22,8 +22,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onSearchComplete:) name:@"SEARCH_COMPLETE" object:nil];
+    
 	UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
+}
+
+- (void) update
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+        [self updateValueLabel];
+    });
 }
 
 - (void)didReceiveMemoryWarning

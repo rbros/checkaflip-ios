@@ -15,4 +15,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *valueLabel;
 @property (strong, nonatomic) IBOutlet UITableView* tableView;
 
+- (void) update;
+- (void) updateValueLabel;
+- (void) onSearchComplete:(NSNotification*)noti;
+
 @end

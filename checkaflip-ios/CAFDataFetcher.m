@@ -56,27 +56,33 @@ NSString* cafurl = @"http://checkaflip.com/";
     _currentKey = key;
     _currentNew = n;
 
-    _ebaysr = [CAFDataFetcher searchEbay:key:n];
+    // set list loading icon.
+    NSOperationQueue* opq = [[NSOperationQueue alloc] init];
+    [opq addOperationWithBlock:^{
 
-    NSUserDefaults* prefs = [NSUserDefaults standardUserDefaults];
-    BOOL manual = [prefs boolForKey:@"cl_manual_city"];
+        _ebaysr = [CAFDataFetcher searchEbay:key:n];
+
+        NSUserDefaults* prefs = [NSUserDefaults standardUserDefaults];
+        BOOL manual = [prefs boolForKey:@"cl_manual_city"];
     
-    NSString* city = @"wichita";
-    if (manual)
-        city = [prefs objectForKey:@"cl_city_name"];
-    else {
-        // get location by gps.
-        city = self.getCityFromLocation;
-    }
+        NSString* city = @"wichita";
+        if (manual)
+            city = [prefs objectForKey:@"cl_city_name"];
+        else {
+            // get location by gps.
+            city = self.getCityFromLocation;
+        }
 
-    _clsr = [CAFDataFetcher searchCraigslist:key:n:city];
+        _clsr = [CAFDataFetcher searchCraigslist:key:n:city];
+
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"SEARCH_COMPLETE" object:self];
+    }];
 }
 
 + (CAFEbaySearchResult*)searchEbay:(NSString*) key:(BOOL)new
 {
     NSString* server = [NSString stringWithFormat:@"%@searchEbay/?q=%@&new=false&json=true", cafurl, key];
-    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server]
-                                                           cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
     
     [request setHTTPMethod:@"GET"];
     
@@ -93,7 +99,7 @@ NSString* cafurl = @"http://checkaflip.com/";
 
 + (CAFCraigslistSearchResult*)searchCraigslist:(NSString*) key:(BOOL)new :(NSString*)city
 {
-    NSString* server = [NSString stringWithFormat:@"http://checkaflip.com/searchCraigslist/?q=%@&new=false&city=%@&json=true", key, city];
+    NSString* server = [NSString stringWithFormat:@"%@searchCraigslist/?q=%@&new=false&city=%@&json=true", cafurl, key, city];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server]
                                                            cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
     
@@ -120,7 +126,7 @@ NSString* cafurl = @"http://checkaflip.com/";
     lat = [NSString stringWithFormat:@"%f", lm.location.coordinate.latitude];
     lon = [NSString stringWithFormat:@"%f", lm.location.coordinate.longitude];
     
-    NSString* server = [NSString stringWithFormat:@"http://checkaflip.com/getcity/?lat=%@&lon=%@", lat, lon];
+    NSString* server = [NSString stringWithFormat:@"%@getcity/?lat=%@&lon=%@", cafurl, lat, lon];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server]
                                                            cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
     

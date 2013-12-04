@@ -32,6 +32,14 @@
     [self.tableView reloadData];
 }
 
+- (void) onSearchComplete:(NSNotification*) noti
+{
+    CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
+    CAFDataFetcher* df = app.getDataFetcher;
+    _clsr = df.getCraigslistSearchResult;
+    [self update];
+}
+
 - (void) updateValueLabel
 {
     self.valueLabel.text = _clsr.getCurrentValue;
@@ -39,18 +47,10 @@
 
 - (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-    // this callback can be moved to a shared delegate between craigslist and ebay tabs to always store datas at a high level.
-
-    // set list loading icon.
-    
-    // load data from http
     CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
     CAFDataFetcher* df = app.getDataFetcher;
     [df search:self.searchBar.text:self.slider.isOn];
-    _clsr = df.getCraigslistSearchResult;
-    
-    [self.tableView reloadData];
-    [self updateValueLabel];
+
     [self.searchBar resignFirstResponder];
 }
 
