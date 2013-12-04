@@ -42,7 +42,7 @@
         return;
     }
     
-    _currentValue = json[@"medianValue"];
+    _currentValue = [NSString stringWithFormat:@"Value: %@", json[@"medianValue"]];
     NSArray* completedListings = json[@"completedListings"];
     for (NSDictionary* listing in completedListings) {
         CAFListingItem* item = [[CAFListingItem alloc] initWithDict:listing];

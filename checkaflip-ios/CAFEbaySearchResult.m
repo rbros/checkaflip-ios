@@ -42,11 +42,9 @@
     }
     
     if ([json[@"completedError"] boolValue] == true) {
-        
         _completedValue = @"Could not find any completed listings.";
     } else {
-
-        _completedValue = json[@"completedPrice"];
+        _completedValue = [NSString stringWithFormat:@"Value: %@", json[@"completedPrice"]];
     }
 
     NSArray* completedListings = json[@"completedListings"];
@@ -61,7 +59,7 @@
         _currentValue = @"Could not find any current listings.";
     } else {
         
-        _currentValue = json[@"currentPrice"];
+        _currentValue = [NSString stringWithFormat:@"Value: %@", json[@"currentPrice"]];
     }
 
     NSArray* currentListings = json[@"currentListings"];
