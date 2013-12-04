@@ -82,6 +82,8 @@
         
         titlelabel.text = [item getTitle];
         pricelabel.text = [item getPrice];
+        
+        // if img is null set placeholder and make dispatch_asnyc
         //imgholder.image = nil; // [UIImage imageName:@"placeholder.jpg"
 
         /* Async load image. */
@@ -109,6 +111,26 @@
     
     [self updateValueLabel];
     return count;
+}
+
+
+- (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CAFListingItem* item = nil;
+    if (_ebaysr && self.ebaySegmentedControl.selectedSegmentIndex == 0) {
+        item = [[_ebaysr getCompletedListings] objectAtIndex:indexPath.row];
+    } else if (_ebaysr) {
+        item = [[_ebaysr getCurrentListings] objectAtIndex:indexPath.row];
+    }
+    
+    if (item){
+        NSURL* url = [NSURL URLWithString:[item getLink]];
+        
+        UIWebView* web = [[UIWebView alloc] init];
+        [web setFrame:CGRectMake(0, 0, 329, 460)];
+        [web loadRequest:[NSURLRequest requestWithURL:url]];
+        [[self view] addSubview:web];
+    }
 }
 
 @end

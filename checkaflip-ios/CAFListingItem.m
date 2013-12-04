@@ -48,4 +48,9 @@
     return _currentPrice;
 }
 
+- (NSString*) getLink
+{
+    return _link;
+}
+
 @end

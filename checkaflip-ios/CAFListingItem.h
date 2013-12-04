@@ -14,5 +14,6 @@
 - (NSString*) getTitle;
 - (NSString*) getImgURL;
 - (NSString*) getPrice;
+- (NSString*) getLink;
 
 @end
