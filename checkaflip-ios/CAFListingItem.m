@@ -43,4 +43,9 @@
     return _img;
 }
 
+- (NSString*) getPrice
+{
+    return _currentPrice;
+}
+
 @end
