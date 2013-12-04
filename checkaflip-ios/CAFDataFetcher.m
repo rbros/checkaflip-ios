@@ -143,6 +143,7 @@ NSString* cafurl = @"http://checkaflip.com/";
     [scanner scanUpToString:@"value=\"" intoString:nil];
     [scanner scanUpToString:@"\">" intoString:&city];
     
+    city = [city substringFromIndex:7];
     return city;
 }
 

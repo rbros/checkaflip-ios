@@ -29,7 +29,7 @@
     self.slider.on = df.getNew;
     
     _clsr = df.getCraigslistSearchResult;
-    [self.tableView reloadData];
+    [self update];
 }
 
 - (void) onSearchComplete:(NSNotification*) noti

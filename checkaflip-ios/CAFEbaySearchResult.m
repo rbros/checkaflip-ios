@@ -41,7 +41,14 @@
         return;
     }
     
-    _completedValue = json[@"completedPrice"];
+    if ([json[@"completedError"] boolValue] == true) {
+        
+        _completedValue = @"Could not find any completed listings.";
+    } else {
+
+        _completedValue = json[@"completedPrice"];
+    }
+
     NSArray* completedListings = json[@"completedListings"];
     for (NSDictionary* listing in completedListings) {
         
@@ -49,7 +56,14 @@
         [_completedListings addObject:item];
     }
     
-    _currentValue = json[@"currentPrice"];
+    if ([json[@"currentError"] boolValue] == true) {
+        
+        _currentValue = @"Could not find any current listings.";
+    } else {
+        
+        _currentValue = json[@"currentPrice"];
+    }
+
     NSArray* currentListings = json[@"currentListings"];
     for (NSDictionary* listing in currentListings) {
         CAFListingItem* item = [[CAFListingItem alloc] initWithDict:listing];

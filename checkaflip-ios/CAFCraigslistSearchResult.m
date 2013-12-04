@@ -37,8 +37,10 @@
         return;
     }
     
-    if ([json[@"error"] boolValue] == true)
+    if ([json[@"error"] boolValue] == true) {
+        _currentValue = @"Could not find any listings.";
         return;
+    }
     
     _currentValue = json[@"medianValue"];
     NSArray* completedListings = json[@"completedListings"];
