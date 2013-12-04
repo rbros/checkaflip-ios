@@ -18,5 +18,6 @@
 - (void) update;
 - (void) updateValueLabel;
 - (void) onSearchComplete:(NSNotification*)noti;
+- (NSArray*) getDisplayedListings;
 
 @end

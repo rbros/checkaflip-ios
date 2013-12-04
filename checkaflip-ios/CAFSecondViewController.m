@@ -60,7 +60,7 @@
     UITableViewCell* cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     
     if (_clsr) {
-        CAFListingItem* item = [[_clsr getListings] objectAtIndex:indexPath.row];
+        CAFListingItem* item = [[self getDisplayedListings] objectAtIndex:indexPath.row];
         cell.textLabel.text = [item getTitle];
     }
     
@@ -69,11 +69,18 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (_clsr) {
+    if (_clsr)
         return [[_clsr getListings] count];
-    }
     
     return 0;
+}
+
+- (NSArray*) getDisplayedListings
+{
+    if (_clsr)
+        return [_clsr getListings];
+
+    return nil;
 }
 
 @end

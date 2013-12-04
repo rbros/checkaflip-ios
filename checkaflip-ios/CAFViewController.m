@@ -9,7 +9,8 @@
 #import "CAFViewController.h"
 #import "CAFAppDelegate.h"
 #import "CAFDataFetcher.h"
-#
+#import "CAFWebViewController.h"
+#import "CAFListingItem.h"
 
 @implementation CAFViewController
 - (IBAction)onSliderChanged:(UISwitch *)sender {
@@ -52,6 +53,20 @@
     CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
     CAFDataFetcher* df = app.getDataFetcher;
     [df setCurrentSearchKey:searchText];
+}
+
+- (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CAFListingItem* item = [[self getDisplayedListings] objectAtIndex:indexPath.row];
+    
+    if (item){
+        NSURL* url = [NSURL URLWithString:[item getLink]];
+        
+        UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+        CAFWebViewController* webview = [sb instantiateViewControllerWithIdentifier:@"CAFWebViewController"];
+        [webview initialize:url:@"eBay"];
+        [self presentViewController:webview animated:YES completion:nil];
+    }
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

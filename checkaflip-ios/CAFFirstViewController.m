@@ -114,24 +114,14 @@
     return count;
 }
 
-
-- (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSArray*) getDisplayedListings
 {
-    CAFListingItem* item = nil;
     if (_ebaysr && self.ebaySegmentedControl.selectedSegmentIndex == 0) {
-        item = [[_ebaysr getCompletedListings] objectAtIndex:indexPath.row];
+        return [_ebaysr getCompletedListings];
     } else if (_ebaysr) {
-        item = [[_ebaysr getCurrentListings] objectAtIndex:indexPath.row];
+        return [_ebaysr getCurrentListings];
     }
-    
-    if (item){
-        NSURL* url = [NSURL URLWithString:[item getLink]];
-        
-        UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
-        CAFWebViewController* webview = [sb instantiateViewControllerWithIdentifier:@"CAFWebViewController"];
-        [webview initialize:url:@"eBay"];
-        [self presentViewController:webview animated:YES completion:nil];
-    }
+    return nil;
 }
 
 @end
