@@ -57,11 +57,16 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    UITableViewCell* cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"CLCellIdent"];
     
     if (_clsr) {
         CAFListingItem* item = [[self getDisplayedListings] objectAtIndex:indexPath.row];
-        cell.textLabel.text = [item getTitle];
+        
+        UITextView* titlelabel = (UITextView*) [cell.contentView viewWithTag:2];
+        UITextView* pricelabel = (UITextView*) [cell.contentView viewWithTag:3];
+        
+        titlelabel.text = [item getTitle];
+        pricelabel.text = [item getPrice];
     }
     
     return cell;
