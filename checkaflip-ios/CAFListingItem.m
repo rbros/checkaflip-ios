@@ -38,4 +38,9 @@
     return _title;
 }
 
+- (NSString*) getImgURL
+{
+    return _img;
+}
+
 @end

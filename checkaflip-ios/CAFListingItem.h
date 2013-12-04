@@ -12,5 +12,6 @@
 
 - (id) initWithDict:(NSDictionary*) json;
 - (NSString*) getTitle;
+- (NSString*) getImgURL;
 
 @end

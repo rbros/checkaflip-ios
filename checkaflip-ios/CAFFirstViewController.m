@@ -66,15 +66,29 @@
 
     UITableViewCell* cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     
+    CAFListingItem* item = nil;
     if (_ebaysr && self.ebaySegmentedControl.selectedSegmentIndex == 0) {
 
-        CAFListingItem* item = [[_ebaysr getCompletedListings] objectAtIndex:indexPath.row];
-        cell.textLabel.text = [item getTitle];
+        item = [[_ebaysr getCompletedListings] objectAtIndex:indexPath.row];
     } else if (_ebaysr) {
-        CAFListingItem* item = [[_ebaysr getCurrentListings] objectAtIndex:indexPath.row];
-        cell.textLabel.text = [item getTitle];
+        item = [[_ebaysr getCurrentListings] objectAtIndex:indexPath.row];
     }
 
+    if (item) {
+        cell.textLabel.text = [item getTitle];
+        cell.imageView.image = nil; // [UIImage imageName:@"placeholder.jpg"
+
+        /* Async load image. */
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0ul), ^{
+            NSData* imgdata = [NSData dataWithContentsOfURL: [NSURL URLWithString:[item getImgURL]]];
+            UIImage* img = [UIImage imageWithData:imgdata];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                cell.imageView.image = img;
+                [cell setNeedsLayout];
+            });
+        });
+    }
     return cell;
 }
 
