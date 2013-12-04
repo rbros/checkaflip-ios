@@ -63,7 +63,7 @@
         CAFListingItem* item = [[self getDisplayedListings] objectAtIndex:indexPath.row];
         
         UITextView* titlelabel = (UITextView*) [cell.contentView viewWithTag:2];
-        UITextView* pricelabel = (UITextView*) [cell.contentView viewWithTag:3];
+        UILabel* pricelabel = (UILabel*) [cell.contentView viewWithTag:3];
         
         titlelabel.text = [item getTitle];
         pricelabel.text = [item getPrice];

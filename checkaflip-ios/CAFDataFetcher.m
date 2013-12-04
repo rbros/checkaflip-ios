@@ -56,11 +56,13 @@ NSString* cafurl = @"http://checkaflip.com/";
     _currentKey = key;
     _currentNew = n;
 
+    NSString* quotedkey = [key stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    
     // set list loading icon.
     NSOperationQueue* opq = [[NSOperationQueue alloc] init];
     [opq addOperationWithBlock:^{
 
-        _ebaysr = [CAFDataFetcher searchEbay:key:n];
+        _ebaysr = [CAFDataFetcher searchEbay:quotedkey:n];
 
         NSUserDefaults* prefs = [NSUserDefaults standardUserDefaults];
         BOOL manual = [prefs boolForKey:@"cl_manual_city"];
@@ -73,7 +75,7 @@ NSString* cafurl = @"http://checkaflip.com/";
             city = self.getCityFromLocation;
         }
 
-        _clsr = [CAFDataFetcher searchCraigslist:key:n:city];
+        _clsr = [CAFDataFetcher searchCraigslist:quotedkey:n:city];
 
         [[NSNotificationCenter defaultCenter] postNotificationName:@"SEARCH_COMPLETE" object:self];
     }];

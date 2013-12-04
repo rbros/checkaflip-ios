@@ -81,8 +81,16 @@
         UITextView* titlelabel = (UITextView*) [cell.contentView viewWithTag:2];
         UITextView* pricelabel = (UITextView*) [cell.contentView viewWithTag:3];
         
+        
+
         titlelabel.text = [item getTitle];
         pricelabel.text = [item getPrice];
+        
+        CGSize size = [pricelabel.text sizeWithFont:pricelabel.font ];
+        
+        
+        CGRect frame = pricelabel.frame;
+        frame.size.width = size.width;
         
         // if img is null set placeholder and make dispatch_asnyc
         //imgholder.image = nil; // [UIImage imageName:@"placeholder.jpg"
