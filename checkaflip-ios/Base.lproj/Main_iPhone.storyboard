@@ -181,6 +181,51 @@
             </objects>
             <point key="canvasLocation" x="-324" y="676"/>
         </scene>
+        <!--Web View Controller - Title-->
+        <scene sceneID="zoT-ji-Hd2">
+            <objects>
+                <viewController storyboardIdentifier="CAFWebViewController" id="bBn-pS-LxG" customClass="CAFWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3T9-ay-jp6"/>
+                        <viewControllerLayoutGuide type="bottom" id="2pW-RQ-EBY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YL7-vS-Rom">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Sv-j9-2dw">
+                                <rect key="frame" x="0.0" y="77" width="320" height="471"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bBn-pS-LxG" id="P7h-1S-7LQ"/>
+                                </connections>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ByX-Sr-nUO">
+                                <rect key="frame" x="0.0" y="33" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="9BV-Bb-aPa">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="z4e-f8-cFA">
+                                            <connections>
+                                                <action selector="back:" destination="bBn-pS-LxG" id="yUZ-Yc-qmQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Whs-WE-rue"/>
+                    <connections>
+                        <outlet property="webView" destination="0Sv-j9-2dw" id="bT5-xz-tK5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erz-Xp-HXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="-294"/>
+        </scene>
         <!--Settings View Controller - Settings-->
         <scene sceneID="772-uF-mys">
             <objects>

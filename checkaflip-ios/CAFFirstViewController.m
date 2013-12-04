@@ -11,6 +11,7 @@
 #import "CAFEbayDataFetcher.h"
 #import "CAFEbaySearchResult.h"
 #import "CAFListingItem.h"
+#import "CAFWebViewController.h"
 
 @interface CAFFirstViewController ()
 @end
@@ -126,10 +127,10 @@
     if (item){
         NSURL* url = [NSURL URLWithString:[item getLink]];
         
-        UIWebView* web = [[UIWebView alloc] init];
-        [web setFrame:CGRectMake(0, 0, 329, 460)];
-        [web loadRequest:[NSURLRequest requestWithURL:url]];
-        [[self view] addSubview:web];
+        UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+        CAFWebViewController* webview = [sb instantiateViewControllerWithIdentifier:@"CAFWebViewController"];
+        [webview initialize:url:@"eBay"];
+        [self presentViewController:webview animated:YES completion:nil];
     }
 }
 
