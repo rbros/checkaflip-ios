@@ -45,6 +45,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.progressView stopAnimating];
         [self.valueLabel setHidden:NO];
+        [self.tableView setContentOffset:CGPointZero animated:YES];
     });
 }
 
