@@ -48,14 +48,14 @@
 		160B52A1184D360300FBF15A /* CAFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAFViewController.m; sourceTree = "<group>"; };
 		160B52A6184D6BD800FBF15A /* CAFSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAFSettingsViewController.h; sourceTree = "<group>"; };
 		160B52A7184D6BD800FBF15A /* CAFSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAFSettingsViewController.m; sourceTree = "<group>"; };
-		162AC3CF184B03AC00E9FCCF /* checkaflip-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "checkaflip-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		162AC3CF184B03AC00E9FCCF /* CheckAFlip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckAFlip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		162AC3D2184B03AC00E9FCCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		162AC3D4184B03AC00E9FCCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		162AC3D6184B03AC00E9FCCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		162AC3DA184B03AC00E9FCCF /* checkaflip-ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "checkaflip-ios-Info.plist"; sourceTree = "<group>"; };
+		162AC3DA184B03AC00E9FCCF /* CheckAFlip-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CheckAFlip-Info.plist"; sourceTree = "<group>"; };
 		162AC3DC184B03AC00E9FCCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		162AC3DE184B03AC00E9FCCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		162AC3E0184B03AC00E9FCCF /* checkaflip-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "checkaflip-ios-Prefix.pch"; sourceTree = "<group>"; };
+		162AC3E0184B03AC00E9FCCF /* CheckAFlip-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CheckAFlip-Prefix.pch"; sourceTree = "<group>"; };
 		162AC3E1184B03AC00E9FCCF /* CAFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAFAppDelegate.h; sourceTree = "<group>"; };
 		162AC3E2184B03AC00E9FCCF /* CAFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAFAppDelegate.m; sourceTree = "<group>"; };
 		162AC3E5184B03AC00E9FCCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -65,9 +65,9 @@
 		162AC3ED184B03AC00E9FCCF /* CAFSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAFSecondViewController.h; sourceTree = "<group>"; };
 		162AC3EE184B03AC00E9FCCF /* CAFSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAFSecondViewController.m; sourceTree = "<group>"; };
 		162AC3F0184B03AC00E9FCCF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		162AC3F6184B03AC00E9FCCF /* checkaflip-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "checkaflip-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		162AC3F6184B03AC00E9FCCF /* CheckAFlipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CheckAFlipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		162AC3F7184B03AC00E9FCCF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		162AC3FF184B03AC00E9FCCF /* checkaflip-iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "checkaflip-iosTests-Info.plist"; sourceTree = "<group>"; };
+		162AC3FF184B03AC00E9FCCF /* CheckAFlipTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CheckAFlipTests-Info.plist"; sourceTree = "<group>"; };
 		162AC401184B03AC00E9FCCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		162AC403184B03AC00E9FCCF /* checkaflip_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = checkaflip_iosTests.m; sourceTree = "<group>"; };
 		1686EFED1850CE6A00F6CD15 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -121,8 +121,8 @@
 		162AC3D0184B03AC00E9FCCF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				162AC3CF184B03AC00E9FCCF /* checkaflip-ios.app */,
-				162AC3F6184B03AC00E9FCCF /* checkaflip-iosTests.xctest */,
+				162AC3CF184B03AC00E9FCCF /* CheckAFlip.app */,
+				162AC3F6184B03AC00E9FCCF /* CheckAFlipTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,10 +173,10 @@
 		162AC3D9184B03AC00E9FCCF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				162AC3DA184B03AC00E9FCCF /* checkaflip-ios-Info.plist */,
+				162AC3DA184B03AC00E9FCCF /* CheckAFlip-Info.plist */,
 				162AC3DB184B03AC00E9FCCF /* InfoPlist.strings */,
 				162AC3DE184B03AC00E9FCCF /* main.m */,
-				162AC3E0184B03AC00E9FCCF /* checkaflip-ios-Prefix.pch */,
+				162AC3E0184B03AC00E9FCCF /* CheckAFlip-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -193,7 +193,7 @@
 		162AC3FE184B03AC00E9FCCF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				162AC3FF184B03AC00E9FCCF /* checkaflip-iosTests-Info.plist */,
+				162AC3FF184B03AC00E9FCCF /* CheckAFlipTests-Info.plist */,
 				162AC400184B03AC00E9FCCF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -202,9 +202,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		162AC3CE184B03AC00E9FCCF /* checkaflip-ios */ = {
+		162AC3CE184B03AC00E9FCCF /* CheckAFlip */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 162AC407184B03AC00E9FCCF /* Build configuration list for PBXNativeTarget "checkaflip-ios" */;
+			buildConfigurationList = 162AC407184B03AC00E9FCCF /* Build configuration list for PBXNativeTarget "CheckAFlip" */;
 			buildPhases = (
 				162AC3CB184B03AC00E9FCCF /* Sources */,
 				162AC3CC184B03AC00E9FCCF /* Frameworks */,
@@ -214,14 +214,14 @@
 			);
 			dependencies = (
 			);
-			name = "checkaflip-ios";
+			name = CheckAFlip;
 			productName = "checkaflip-ios";
-			productReference = 162AC3CF184B03AC00E9FCCF /* checkaflip-ios.app */;
+			productReference = 162AC3CF184B03AC00E9FCCF /* CheckAFlip.app */;
 			productType = "com.apple.product-type.application";
 		};
-		162AC3F5184B03AC00E9FCCF /* checkaflip-iosTests */ = {
+		162AC3F5184B03AC00E9FCCF /* CheckAFlipTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 162AC40A184B03AC00E9FCCF /* Build configuration list for PBXNativeTarget "checkaflip-iosTests" */;
+			buildConfigurationList = 162AC40A184B03AC00E9FCCF /* Build configuration list for PBXNativeTarget "CheckAFlipTests" */;
 			buildPhases = (
 				162AC3F2184B03AC00E9FCCF /* Sources */,
 				162AC3F3184B03AC00E9FCCF /* Frameworks */,
@@ -232,9 +232,9 @@
 			dependencies = (
 				162AC3FC184B03AC00E9FCCF /* PBXTargetDependency */,
 			);
-			name = "checkaflip-iosTests";
+			name = CheckAFlipTests;
 			productName = "checkaflip-iosTests";
-			productReference = 162AC3F6184B03AC00E9FCCF /* checkaflip-iosTests.xctest */;
+			productReference = 162AC3F6184B03AC00E9FCCF /* CheckAFlipTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -252,7 +252,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 162AC3CA184B03AC00E9FCCF /* Build configuration list for PBXProject "checkaflip-ios" */;
+			buildConfigurationList = 162AC3CA184B03AC00E9FCCF /* Build configuration list for PBXProject "CheckAFlip" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -265,8 +265,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				162AC3CE184B03AC00E9FCCF /* checkaflip-ios */,
-				162AC3F5184B03AC00E9FCCF /* checkaflip-iosTests */,
+				162AC3CE184B03AC00E9FCCF /* CheckAFlip */,
+				162AC3F5184B03AC00E9FCCF /* CheckAFlipTests */,
 			);
 		};
 /* End PBXProject section */
@@ -325,7 +325,7 @@
 /* Begin PBXTargetDependency section */
 		162AC3FC184B03AC00E9FCCF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 162AC3CE184B03AC00E9FCCF /* checkaflip-ios */;
+			target = 162AC3CE184B03AC00E9FCCF /* CheckAFlip */;
 			targetProxy = 162AC3FB184B03AC00E9FCCF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -446,9 +446,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "checkaflip-ios/checkaflip-ios-Prefix.pch";
-				INFOPLIST_FILE = "checkaflip-ios/checkaflip-ios-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "checkaflip-ios/CheckAFlip-Prefix.pch";
+				INFOPLIST_FILE = "checkaflip-ios/CheckAFlip-Info.plist";
+				PRODUCT_NAME = CheckAFlip;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -459,9 +459,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "checkaflip-ios/checkaflip-ios-Prefix.pch";
-				INFOPLIST_FILE = "checkaflip-ios/checkaflip-ios-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "checkaflip-ios/CheckAFlip-Prefix.pch";
+				INFOPLIST_FILE = "checkaflip-ios/CheckAFlip-Info.plist";
+				PRODUCT_NAME = CheckAFlip;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -482,8 +482,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "checkaflip-iosTests/checkaflip-iosTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "checkaflip-iosTests/CheckAFlipTests-Info.plist";
+				PRODUCT_NAME = CheckAFlipTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -501,8 +501,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "checkaflip-ios/checkaflip-ios-Prefix.pch";
-				INFOPLIST_FILE = "checkaflip-iosTests/checkaflip-iosTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "checkaflip-iosTests/CheckAFlipTests-Info.plist";
+				PRODUCT_NAME = CheckAFlipTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -511,7 +511,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		162AC3CA184B03AC00E9FCCF /* Build configuration list for PBXProject "checkaflip-ios" */ = {
+		162AC3CA184B03AC00E9FCCF /* Build configuration list for PBXProject "CheckAFlip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				162AC405184B03AC00E9FCCF /* Debug */,
@@ -520,7 +520,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		162AC407184B03AC00E9FCCF /* Build configuration list for PBXNativeTarget "checkaflip-ios" */ = {
+		162AC407184B03AC00E9FCCF /* Build configuration list for PBXNativeTarget "CheckAFlip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				162AC408184B03AC00E9FCCF /* Debug */,
@@ -529,7 +529,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		162AC40A184B03AC00E9FCCF /* Build configuration list for PBXNativeTarget "checkaflip-iosTests" */ = {
+		162AC40A184B03AC00E9FCCF /* Build configuration list for PBXNativeTarget "CheckAFlipTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				162AC40B184B03AC00E9FCCF /* Debug */,

@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "162AC3CE184B03AC00E9FCCF"
                BuildableName = "checkaflip-ios.app"
-               BlueprintName = "checkaflip-ios"
-               ReferencedContainer = "container:checkaflip-ios.xcodeproj">
+               BlueprintName = "CheckAFlip"
+               ReferencedContainer = "container:CheckAFlip.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "162AC3F5184B03AC00E9FCCF"
                BuildableName = "checkaflip-iosTests.xctest"
-               BlueprintName = "checkaflip-iosTests"
-               ReferencedContainer = "container:checkaflip-ios.xcodeproj">
+               BlueprintName = "CheckAFlipTests"
+               ReferencedContainer = "container:CheckAFlip.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "162AC3CE184B03AC00E9FCCF"
             BuildableName = "checkaflip-ios.app"
-            BlueprintName = "checkaflip-ios"
-            ReferencedContainer = "container:checkaflip-ios.xcodeproj">
+            BlueprintName = "CheckAFlip"
+            ReferencedContainer = "container:CheckAFlip.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "162AC3CE184B03AC00E9FCCF"
             BuildableName = "checkaflip-ios.app"
-            BlueprintName = "checkaflip-ios"
-            ReferencedContainer = "container:checkaflip-ios.xcodeproj">
+            BlueprintName = "CheckAFlip"
+            ReferencedContainer = "container:CheckAFlip.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,8 +85,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "162AC3CE184B03AC00E9FCCF"
             BuildableName = "checkaflip-ios.app"
-            BlueprintName = "checkaflip-ios"
-            ReferencedContainer = "container:checkaflip-ios.xcodeproj">
+            BlueprintName = "CheckAFlip"
+            ReferencedContainer = "container:CheckAFlip.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
