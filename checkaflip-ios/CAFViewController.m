@@ -103,4 +103,8 @@
     return 0;
 }
 
+- (void) updateValueLabel
+{
+}
+
 @end
