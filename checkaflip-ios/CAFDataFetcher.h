@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 #import "CAFEbaySearchResult.h"
 #import "CAFCraigslistSearchResult.h"
 
-@interface CAFDataFetcher : NSObject
+@interface CAFDataFetcher : NSObject <CLLocationManagerDelegate>
 
 - (void) search:(NSString*) key :(BOOL) n;
 - (NSString*) getCurrentSearchKey;

@@ -30,9 +30,11 @@ NSString* cafurl = @"http://checkaflip.com/";
     if (self) {
 
         lm = [[CLLocationManager alloc] init];
-        lm.distanceFilter = kCLDistanceFilterNone;
-        lm.desiredAccuracy = kCLLocationAccuracyHundredMeters;
-        [lm startUpdatingLocation];
+        if ([CLLocationManager locationServicesEnabled]) {
+            [lm setDesiredAccuracy:kCLLocationAccuracyBestForNavigation];
+            [lm setDelegate:self];
+            [lm startUpdatingLocation];
+        }
         
         NSUserDefaults* prefs = [NSUserDefaults standardUserDefaults];
         [prefs addObserver:self forKeyPath:@"cl_manual_city"
@@ -44,10 +46,23 @@ NSString* cafurl = @"http://checkaflip.com/";
     return self;
 }
 
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    
+    
+}
+
 - (void) observeValueForKeyPath:(NSString*) keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"cl_manual_city"])
-        [lm startUpdatingLocation];
-    else
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"cl_manual_city"]) {
+        if ([CLLocationManager locationServicesEnabled]) {
+
+            [lm startUpdatingLocation];
+        }
+    } else
         [lm stopUpdatingLocation];
 }
 

@@ -25,6 +25,7 @@
 		162AC3FA184B03AC00E9FCCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162AC3D6184B03AC00E9FCCF /* UIKit.framework */; };
 		162AC402184B03AC00E9FCCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 162AC400184B03AC00E9FCCF /* InfoPlist.strings */; };
 		162AC404184B03AC00E9FCCF /* checkaflip_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 162AC403184B03AC00E9FCCF /* checkaflip_iosTests.m */; };
+		1686EFEE1850CE6A00F6CD15 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1686EFED1850CE6A00F6CD15 /* CoreLocation.framework */; };
 		169C6CB0184BF92700253B81 /* CAFEbaySearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 169C6CAF184BF92700253B81 /* CAFEbaySearchResult.m */; };
 		169C6CB3184C30F400253B81 /* CAFDataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 169C6CB2184C30F400253B81 /* CAFDataFetcher.m */; };
 		169C6CB6184C3A8C00253B81 /* CAFCraigslistSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 169C6CB5184C3A8C00253B81 /* CAFCraigslistSearchResult.m */; };
@@ -69,6 +70,7 @@
 		162AC3FF184B03AC00E9FCCF /* checkaflip-iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "checkaflip-iosTests-Info.plist"; sourceTree = "<group>"; };
 		162AC401184B03AC00E9FCCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		162AC403184B03AC00E9FCCF /* checkaflip_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = checkaflip_iosTests.m; sourceTree = "<group>"; };
+		1686EFED1850CE6A00F6CD15 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		169C6CAE184BF92700253B81 /* CAFEbaySearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAFEbaySearchResult.h; sourceTree = "<group>"; };
 		169C6CAF184BF92700253B81 /* CAFEbaySearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAFEbaySearchResult.m; sourceTree = "<group>"; };
 		169C6CB1184C30F400253B81 /* CAFDataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAFDataFetcher.h; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1686EFEE1850CE6A00F6CD15 /* CoreLocation.framework in Frameworks */,
 				162AC3D5184B03AC00E9FCCF /* CoreGraphics.framework in Frameworks */,
 				162AC3D7184B03AC00E9FCCF /* UIKit.framework in Frameworks */,
 				162AC3D3184B03AC00E9FCCF /* Foundation.framework in Frameworks */,
@@ -127,6 +130,7 @@
 		162AC3D1184B03AC00E9FCCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1686EFED1850CE6A00F6CD15 /* CoreLocation.framework */,
 				162AC3D2184B03AC00E9FCCF /* Foundation.framework */,
 				162AC3D4184B03AC00E9FCCF /* CoreGraphics.framework */,
 				162AC3D6184B03AC00E9FCCF /* UIKit.framework */,
