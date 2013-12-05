@@ -11,8 +11,8 @@
 @interface CAFViewController : UIViewController <UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UISearchBar* searchBar;
-@property (strong, nonatomic) IBOutlet UISwitch* slider;
-@property (strong, nonatomic) IBOutlet UILabel *valueLabel;
+@property (strong, nonatomic) IBOutlet UIButton* usedNewButton;
+@property (strong, nonatomic) IBOutlet UILabel* valueLabel;
 @property (strong, nonatomic) IBOutlet UITableView* tableView;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView* progressView;
 

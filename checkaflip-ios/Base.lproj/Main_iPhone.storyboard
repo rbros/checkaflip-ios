@@ -75,14 +75,6 @@
                                     <outlet property="delegate" destination="CZ4-MO-1fc" id="CO9-d8-4Wg"/>
                                 </connections>
                             </searchBar>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" offImage="second" translatesAutoresizingMaskIntoConstraints="NO" id="uci-UD-3tR">
-                                <rect key="frame" x="261" y="27" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="onTintColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="onSliderChanged:" destination="CZ4-MO-1fc" eventType="valueChanged" id="KB5-Lf-zgH"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIy-eT-ytU">
                                 <rect key="frame" x="0.0" y="101" width="320" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -93,6 +85,19 @@
                                 <rect key="frame" x="150" y="113" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upf-4z-RvK">
+                                <rect key="frame" x="261" y="28" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Used">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="New">
+                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onUsedNewButtonChanged:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="4Qg-EB-FBg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
@@ -101,8 +106,8 @@
                         <outlet property="ebaySegmentedControl" destination="Cnz-XX-Jy6" id="9oh-KZ-Fig"/>
                         <outlet property="progressView" destination="hzn-tx-xxN" id="Sm7-T0-GJx"/>
                         <outlet property="searchBar" destination="Mwy-ZO-9iT" id="1JE-pN-9ZZ"/>
-                        <outlet property="slider" destination="uci-UD-3tR" id="aX7-P4-lLM"/>
                         <outlet property="tableView" destination="71j-vL-8fy" id="tcR-QL-Kzl"/>
+                        <outlet property="usedNewButton" destination="Upf-4z-RvK" id="KQQ-ru-oDt"/>
                         <outlet property="valueLabel" destination="qIy-eT-ytU" id="6Mt-ei-EM6"/>
                     </connections>
                 </viewController>
@@ -164,14 +169,6 @@
                                     <outlet property="delegate" destination="QUy-BD-bpt" id="Qgb-A4-MmX"/>
                                 </connections>
                             </tableView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gdN-ov-3ec">
-                                <rect key="frame" x="261" y="27" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="onSliderChanged:" destination="QUy-BD-bpt" eventType="valueChanged" id="bJa-RL-ANB"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="E5O-Ix-CrP">
                                 <rect key="frame" x="0.0" y="65" width="320" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -201,6 +198,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXb-5q-4qJ">
+                                <rect key="frame" x="261" y="28" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Used">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="New">
+                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onUsedNewButtonChanged:" destination="QUy-BD-bpt" eventType="touchUpInside" id="U9b-H3-C0S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
@@ -208,8 +218,8 @@
                     <connections>
                         <outlet property="progressView" destination="p5F-LU-7Go" id="WeB-cx-rsN"/>
                         <outlet property="searchBar" destination="s2D-q0-kjk" id="UHi-FO-FIK"/>
-                        <outlet property="slider" destination="gdN-ov-3ec" id="0Vq-wm-7x5"/>
                         <outlet property="tableView" destination="SKy-de-JBU" id="h8A-tO-F4n"/>
+                        <outlet property="usedNewButton" destination="nXb-5q-4qJ" id="0pA-xQ-teE"/>
                         <outlet property="valueLabel" destination="E5O-Ix-CrP" id="epV-ha-qW8"/>
                     </connections>
                 </viewController>

@@ -13,11 +13,12 @@
 #import "CAFListingItem.h"
 
 @implementation CAFViewController
-- (IBAction)onSliderChanged:(UISwitch *)sender {
-    
+- (IBAction)onUsedNewButtonChanged:(UIButton *)sender {
+
     CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
     CAFDataFetcher* df = app.getDataFetcher;
-    [df setNew:self.slider.isOn];
+    [self.usedNewButton setSelected:![self.usedNewButton isSelected]];
+    [df setNew:self.usedNewButton.isSelected];
 }
 
 - (void)viewDidLoad

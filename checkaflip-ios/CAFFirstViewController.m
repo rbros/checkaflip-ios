@@ -30,7 +30,8 @@
     CAFDataFetcher* df = app.getDataFetcher;
     
     self.searchBar.text = df.getCurrentSearchKey;
-    self.slider.on = df.getNew;
+    self.usedNewButton.selected = df.getNew;
+
     
     _ebaysr = df.getEbaySearchResult;
     [self update];
@@ -59,7 +60,7 @@
 {
     CAFAppDelegate* app = (CAFAppDelegate*)[[UIApplication sharedApplication] delegate];
     CAFDataFetcher* df = app.getDataFetcher;
-    [df search:self.searchBar.text:self.slider.isOn];
+    [df search:self.searchBar.text:self.usedNewButton.selected];
         
     [self.searchBar resignFirstResponder];
 }

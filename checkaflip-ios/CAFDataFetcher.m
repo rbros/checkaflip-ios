@@ -85,7 +85,12 @@ NSString* cafurl = @"http://checkaflip.com/";
 
 + (CAFEbaySearchResult*)searchEbay:(NSString*) key:(BOOL)new
 {
-    NSString* server = [NSString stringWithFormat:@"%@searchEbay/?q=%@&new=false&json=true", cafurl, key];
+    
+    NSString* usedornew = @"false";
+    if (new)
+        usedornew = @"true";
+
+    NSString* server = [NSString stringWithFormat:@"%@searchEbay/?q=%@&new=%@&json=true", cafurl, key, usedornew];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
     
     [request setHTTPMethod:@"GET"];
@@ -103,7 +108,13 @@ NSString* cafurl = @"http://checkaflip.com/";
 
 + (CAFCraigslistSearchResult*)searchCraigslist:(NSString*) key:(BOOL)new :(NSString*)city:(NSString*)ebayAvg
 {
-    NSString* server = [NSString stringWithFormat:@"%@searchCraigslist/?q=%@&new=false&city=%@&json=true", cafurl, key, city];
+    
+    NSString* usedornew = @"false";
+    if (new)
+        usedornew = @"true";
+    
+    NSString* l = [NSString stringWithFormat:@"%@", nil];
+    NSString* server = [NSString stringWithFormat:@"%@searchCraigslist/?q=%@&new=%@&city=%@&json=true", cafurl, key, usedornew, city];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: [NSURL URLWithString:server]
                                                            cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
     
@@ -148,6 +159,12 @@ NSString* cafurl = @"http://checkaflip.com/";
     [scanner scanUpToString:@"\">" intoString:&city];
     
     city = [city substringFromIndex:7];
+
+    // Logic could be improved. Possibly pull this value from
+    // prefs on error.
+    if (!city || [city length] == 0)
+        city = @"wichita";
+
     return city;
 }
 
