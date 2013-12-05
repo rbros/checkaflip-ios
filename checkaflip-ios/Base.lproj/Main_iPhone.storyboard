@@ -75,9 +75,10 @@
                                     <outlet property="delegate" destination="CZ4-MO-1fc" id="CO9-d8-4Wg"/>
                                 </connections>
                             </searchBar>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uci-UD-3tR">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" onImage="first" offImage="second" translatesAutoresizingMaskIntoConstraints="NO" id="uci-UD-3tR">
                                 <rect key="frame" x="261" y="27" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="onSliderChanged:" destination="CZ4-MO-1fc" eventType="valueChanged" id="KB5-Lf-zgH"/>
                                 </connections>
