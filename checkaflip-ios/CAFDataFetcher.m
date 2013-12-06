@@ -46,16 +46,6 @@ NSString* cafurl = @"http://checkaflip.com/";
     return self;
 }
 
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
-{
-    
-}
-
--(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-    
-    
-}
-
 - (void) observeValueForKeyPath:(NSString*) keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"cl_manual_city"]) {
         if ([CLLocationManager locationServicesEnabled]) {
