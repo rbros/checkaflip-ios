@@ -9,8 +9,8 @@
             <objects>
                 <viewController title="First" id="CZ4-MO-1fc" customClass="CAFFirstViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ASE-AL-JxX"/>
-                        <viewControllerLayoutGuide type="bottom" id="BJQ-34-arm"/>
+                        <viewControllerLayoutGuide type="top" id="DSW-Jl-Aeq"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZwQ-HK-kGR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2VE-Yg-loa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -28,7 +28,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="71j-vL-8fy">
-                                <rect key="frame" x="0.0" y="143" width="320" height="369"/>
+                                <rect key="frame" x="0.0" y="143" width="320" height="374"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
@@ -122,8 +122,8 @@
             <objects>
                 <viewController title="Second" id="QUy-BD-bpt" customClass="CAFSecondViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cBf-FI-kip"/>
-                        <viewControllerLayoutGuide type="bottom" id="cbi-Ju-idc"/>
+                        <viewControllerLayoutGuide type="top" id="sV6-F4-IIc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nlu-uN-A0e"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gMD-aP-Fq6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -256,8 +256,8 @@
             <objects>
                 <viewController storyboardIdentifier="CAFWebViewController" id="bBn-pS-LxG" customClass="CAFWebViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3T9-ay-jp6"/>
-                        <viewControllerLayoutGuide type="bottom" id="2pW-RQ-EBY"/>
+                        <viewControllerLayoutGuide type="top" id="mVZ-fr-t9M"/>
+                        <viewControllerLayoutGuide type="bottom" id="UlP-HF-9IO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YL7-vS-Rom">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -301,8 +301,8 @@
             <objects>
                 <viewController id="hEC-45-IQ4" customClass="CAFSettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ZlA-qX-I5a"/>
-                        <viewControllerLayoutGuide type="bottom" id="8pB-2h-23l"/>
+                        <viewControllerLayoutGuide type="top" id="3jc-PJ-utU"/>
+                        <viewControllerLayoutGuide type="bottom" id="l0N-4p-RNc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iDz-wd-fma">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>

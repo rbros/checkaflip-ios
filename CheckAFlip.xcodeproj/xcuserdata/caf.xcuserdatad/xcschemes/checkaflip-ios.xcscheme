@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "162AC3CE184B03AC00E9FCCF"
-               BuildableName = "checkaflip-ios.app"
+               BuildableName = "CheckAFlip.app"
                BlueprintName = "CheckAFlip"
                ReferencedContainer = "container:CheckAFlip.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "162AC3F5184B03AC00E9FCCF"
-               BuildableName = "checkaflip-iosTests.xctest"
+               BuildableName = "CheckAFlipTests.xctest"
                BlueprintName = "CheckAFlipTests"
                ReferencedContainer = "container:CheckAFlip.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "162AC3CE184B03AC00E9FCCF"
-            BuildableName = "checkaflip-ios.app"
+            BuildableName = "CheckAFlip.app"
             BlueprintName = "CheckAFlip"
             ReferencedContainer = "container:CheckAFlip.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "162AC3CE184B03AC00E9FCCF"
-            BuildableName = "checkaflip-ios.app"
+            BuildableName = "CheckAFlip.app"
             BlueprintName = "CheckAFlip"
             ReferencedContainer = "container:CheckAFlip.xcodeproj">
          </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "162AC3CE184B03AC00E9FCCF"
-            BuildableName = "checkaflip-ios.app"
+            BuildableName = "CheckAFlip.app"
             BlueprintName = "CheckAFlip"
             ReferencedContainer = "container:CheckAFlip.xcodeproj">
          </BuildableReference>
