@@ -234,8 +234,8 @@
                                 <rect key="frame" x="150" y="81" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indicates a potential flip." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQQ-cs-Yth">
-                                <rect key="frame" x="81" y="495" width="259" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Indicates a potential flip." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQQ-cs-Yth">
+                                <rect key="frame" x="81" y="495" width="239" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -280,7 +280,9 @@
                             <constraint firstAttribute="trailing" secondItem="MQQ-cs-Yth" secondAttribute="trailing" constant="-20" id="C1l-Rs-vbf"/>
                             <constraint firstItem="UMJ-EE-eGL" firstAttribute="leading" secondItem="gMD-aP-Fq6" secondAttribute="leading" constant="51" id="Hya-jQ-8GM"/>
                             <constraint firstItem="SKy-de-JBU" firstAttribute="top" secondItem="E5O-Ix-CrP" secondAttribute="bottom" constant="8" symbolic="YES" id="JTH-i0-tGn"/>
+                            <constraint firstAttribute="bottom" secondItem="MQQ-cs-Yth" secondAttribute="bottom" constant="52" id="L0A-zs-OBw"/>
                             <constraint firstItem="UMJ-EE-eGL" firstAttribute="top" secondItem="MQQ-cs-Yth" secondAttribute="top" id="Lj4-JV-lDc"/>
+                            <constraint firstAttribute="bottom" secondItem="UMJ-EE-eGL" secondAttribute="bottom" constant="52" id="QOW-nA-gxZ"/>
                             <constraint firstAttribute="trailing" secondItem="E5O-Ix-CrP" secondAttribute="trailing" id="SxA-hp-gl3"/>
                             <constraint firstItem="E5O-Ix-CrP" firstAttribute="top" secondItem="s2D-q0-kjk" secondAttribute="bottom" id="UFq-tg-RD8"/>
                             <constraint firstItem="p5F-LU-7Go" firstAttribute="top" secondItem="s2D-q0-kjk" secondAttribute="bottom" constant="16" id="YPL-fh-agZ"/>
