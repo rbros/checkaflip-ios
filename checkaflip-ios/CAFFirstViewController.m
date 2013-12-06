@@ -88,7 +88,7 @@
         
         CALayer* l = [imgholder layer];
         [l setMasksToBounds:YES];
-        [l setCornerRadius:10];
+        [l setCornerRadius:5];
 
         // if img is null set placeholder and make dispatch_asnyc
         //imgholder.image = nil; // [UIImage imageName:@"placeholder.jpg"
