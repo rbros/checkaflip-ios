@@ -1,3 +1,5 @@
 *~
 *.swp
 xcuserdata/
+.DS_Store
+CheckAFlip.xcodeproj/project.xcworkspace
